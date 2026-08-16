@@ -1,0 +1,9 @@
+[project]
+name = "beyond-import-dependence-sim"
+version = "0.1.0"
+description = "Three mechanisms of black-box dependence: the boundary detector, capability proliferation and hysteresis, and the breadth-depth topology of strategic risk"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]

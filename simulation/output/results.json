@@ -1,0 +1,1406 @@
+{
+  "detector": {
+    "constants": {
+      "HORIZON": 10.0,
+      "DISCOUNT": 0.05,
+      "N_DRAWS": 4000,
+      "SEED": 20260816
+    },
+    "nodes": {
+      "embargoed_frontier_tool": {
+        "truth": 6.391252,
+        "import_share": 0.0,
+        "trade_index": 0.0,
+        "capability_burden": 0.307837,
+        "note": "controlled: recorded imports are zero because supply is already denied"
+      },
+      "frontier_tool_supplied": {
+        "truth": 3.96762,
+        "import_share": 0.98,
+        "trade_index": 0.9408,
+        "capability_burden": 0.091414,
+        "note": "the same machine, still arriving"
+      },
+      "enclave_assembly": {
+        "truth": 2.8854,
+        "import_share": 0.15,
+        "trade_index": 0.045,
+        "capability_burden": 0.051084,
+        "note": "assembled locally from an imported kit under foreign design and process authority"
+      },
+      "cloud_controlled_device": {
+        "truth": 2.401668,
+        "import_share": 0.2,
+        "trade_index": 0.11,
+        "capability_burden": 0.033836,
+        "note": "modest goods value, external update and control authority"
+      },
+      "midstream_material": {
+        "truth": 2.351993,
+        "import_share": 0.9,
+        "trade_index": 0.765,
+        "capability_burden": 0.028741,
+        "note": "a refining or wafer stage that left and did not come back"
+      },
+      "understood_ore": {
+        "truth": 1.246124,
+        "import_share": 0.95,
+        "trade_index": 0.5225,
+        "capability_burden": 0.002175,
+        "note": "high import share inside a process the region masters"
+      },
+      "standard_component": {
+        "truth": 0.277397,
+        "import_share": 0.8,
+        "trade_index": 0.36,
+        "capability_burden": 0.000178,
+        "note": "documented, multiply sourced, qualifiable"
+      },
+      "white_box_import": {
+        "truth": 0.997632,
+        "import_share": 0.7,
+        "trade_index": 0.28,
+        "capability_burden": 0.001456,
+        "note": "made elsewhere by choice, specified and integrated here"
+      }
+    },
+    "spearman_vs_truth": {
+      "import_share": -0.309524,
+      "trade_index": -0.285714,
+      "capability_burden": 1.0
+    },
+    "spearman_magnitude": {
+      "import_share": 0.309524,
+      "trade_index": 0.285714,
+      "capability_burden": 1.0
+    },
+    "ranks": {
+      "embargoed_frontier_tool": {
+        "truth": 1,
+        "import_share": 8,
+        "trade_index": 8,
+        "capability_burden": 1
+      },
+      "frontier_tool_supplied": {
+        "truth": 2,
+        "import_share": 1,
+        "trade_index": 1,
+        "capability_burden": 2
+      },
+      "enclave_assembly": {
+        "truth": 3,
+        "import_share": 7,
+        "trade_index": 7,
+        "capability_burden": 3
+      },
+      "cloud_controlled_device": {
+        "truth": 4,
+        "import_share": 6,
+        "trade_index": 6,
+        "capability_burden": 4
+      },
+      "midstream_material": {
+        "truth": 5,
+        "import_share": 3,
+        "trade_index": 2,
+        "capability_burden": 5
+      },
+      "understood_ore": {
+        "truth": 6,
+        "import_share": 2,
+        "trade_index": 3,
+        "capability_burden": 6
+      },
+      "standard_component": {
+        "truth": 8,
+        "import_share": 4,
+        "trade_index": 4,
+        "capability_burden": 8
+      },
+      "white_box_import": {
+        "truth": 7,
+        "import_share": 5,
+        "trade_index": 5,
+        "capability_burden": 7
+      }
+    },
+    "diagnostics": {
+      "embargoed_truth_rank": 1,
+      "embargoed_trade_rank": 8,
+      "embargoed_capability_rank": 1,
+      "enclave_truth_rank": 3,
+      "enclave_trade_rank": 7,
+      "enclave_capability_rank": 3,
+      "ore_truth_rank": 6,
+      "ore_trade_rank": 3,
+      "ore_capability_rank": 6,
+      "standard_truth_rank": 8,
+      "standard_trade_rank": 4
+    },
+    "embargo_episode": {
+      "trade_index_before": 0.9408,
+      "trade_index_after": 0.0,
+      "trade_index_change": -0.9408,
+      "truth_before": 3.96762,
+      "truth_after": 6.391252,
+      "truth_ratio": 1.610853,
+      "capability_burden_before": 0.091414,
+      "capability_burden_after": 0.307837
+    },
+    "transparent_subset_spearman": {
+      "trade_index": 0.8,
+      "capability_burden": 1.0
+    }
+  },
+  "proliferation": {
+    "constants": {
+      "YEARS": 40,
+      "DELTA0": 0.035,
+      "DELTA_LOST": 0.12,
+      "Q_STAR": 0.35,
+      "ALPHA": 0.055,
+      "BETA": 0.02,
+      "CHI": 0.11,
+      "OMEGA": 0.09,
+      "K_INIT": 0.55,
+      "RD": 0.35
+    },
+    "arms": {
+      "autarkic": {
+        "final_k": 0.664546,
+        "below_scale_from": null,
+        "k": [
+          0.559764,
+          0.568769,
+          0.577066,
+          0.584704,
+          0.591729,
+          0.598185,
+          0.604114,
+          0.609555,
+          0.614546,
+          0.619121,
+          0.623312,
+          0.62715,
+          0.630663,
+          0.633877,
+          0.636818,
+          0.639506,
+          0.641963,
+          0.644209,
+          0.64626,
+          0.648134,
+          0.649845,
+          0.651407,
+          0.652833,
+          0.654135,
+          0.655323,
+          0.656407,
+          0.657395,
+          0.658297,
+          0.65912,
+          0.65987,
+          0.660554,
+          0.661178,
+          0.661747,
+          0.662266,
+          0.662739,
+          0.66317,
+          0.663563,
+          0.663921,
+          0.664248,
+          0.664546
+        ],
+        "q_dom": [
+          1.045,
+          1.053787,
+          1.061892,
+          1.06936,
+          1.076234,
+          1.082556,
+          1.088367,
+          1.093703,
+          1.0986,
+          1.103091,
+          1.107208,
+          1.11098,
+          1.114435,
+          1.117597,
+          1.12049,
+          1.123136,
+          1.125555,
+          1.127767,
+          1.129788,
+          1.131634,
+          1.133321,
+          1.134861,
+          1.136267,
+          1.13755,
+          1.138722,
+          1.13979,
+          1.140766,
+          1.141656,
+          1.142467,
+          1.143208,
+          1.143883,
+          1.144499,
+          1.14506,
+          1.145573,
+          1.146039,
+          1.146465,
+          1.146853,
+          1.147207,
+          1.147529,
+          1.147823
+        ]
+      },
+      "absorbing_importer": {
+        "final_k": 0.685511,
+        "below_scale_from": null,
+        "k": [
+          0.568488,
+          0.584514,
+          0.598392,
+          0.610399,
+          0.62078,
+          0.62975,
+          0.637496,
+          0.644182,
+          0.64995,
+          0.654925,
+          0.659215,
+          0.662912,
+          0.666098,
+          0.668844,
+          0.671209,
+          0.673246,
+          0.675,
+          0.676511,
+          0.677812,
+          0.678932,
+          0.679896,
+          0.680726,
+          0.681441,
+          0.682056,
+          0.682585,
+          0.683041,
+          0.683433,
+          0.683771,
+          0.684061,
+          0.684311,
+          0.684526,
+          0.684712,
+          0.684871,
+          0.685008,
+          0.685126,
+          0.685228,
+          0.685315,
+          0.68539,
+          0.685455,
+          0.685511
+        ],
+        "q_dom": [
+          0.5225,
+          0.53082,
+          0.538031,
+          0.544276,
+          0.54968,
+          0.554351,
+          0.558388,
+          0.561873,
+          0.564882,
+          0.567478,
+          0.569716,
+          0.571647,
+          0.57331,
+          0.574744,
+          0.57598,
+          0.577044,
+          0.577961,
+          0.57875,
+          0.57943,
+          0.580015,
+          0.580519,
+          0.580953,
+          0.581327,
+          0.581648,
+          0.581925,
+          0.582163,
+          0.582368,
+          0.582545,
+          0.582697,
+          0.582828,
+          0.58294,
+          0.583037,
+          0.58312,
+          0.583192,
+          0.583254,
+          0.583307,
+          0.583352,
+          0.583392,
+          0.583426,
+          0.583455
+        ]
+      },
+      "passive_importer": {
+        "final_k": 0.350639,
+        "below_scale_from": null,
+        "k": [
+          0.529507,
+          0.511178,
+          0.494766,
+          0.480058,
+          0.466865,
+          0.455021,
+          0.444382,
+          0.434819,
+          0.426218,
+          0.418479,
+          0.411512,
+          0.405238,
+          0.399585,
+          0.394491,
+          0.389899,
+          0.385758,
+          0.382024,
+          0.378654,
+          0.375614,
+          0.372871,
+          0.370395,
+          0.368159,
+          0.366141,
+          0.364319,
+          0.362673,
+          0.361187,
+          0.359844,
+          0.358632,
+          0.357537,
+          0.356547,
+          0.355653,
+          0.354845,
+          0.354115,
+          0.353456,
+          0.35286,
+          0.352322,
+          0.351835,
+          0.351395,
+          0.350998,
+          0.350639
+        ],
+        "q_dom": [
+          0.5225,
+          0.513278,
+          0.50503,
+          0.497645,
+          0.491026,
+          0.485089,
+          0.479759,
+          0.474972,
+          0.470668,
+          0.466798,
+          0.463316,
+          0.46018,
+          0.457357,
+          0.454813,
+          0.452521,
+          0.450455,
+          0.448591,
+          0.446911,
+          0.445394,
+          0.444026,
+          0.442792,
+          0.441678,
+          0.440672,
+          0.439763,
+          0.438943,
+          0.438203,
+          0.437534,
+          0.43693,
+          0.436384,
+          0.435891,
+          0.435446,
+          0.435044,
+          0.43468,
+          0.434352,
+          0.434055,
+          0.433787,
+          0.433545,
+          0.433326,
+          0.433128,
+          0.432949
+        ]
+      },
+      "deep_import_low_absorption": {
+        "final_k": 0.132058,
+        "below_scale_from": 0,
+        "k": [
+          0.464603,
+          0.396934,
+          0.343209,
+          0.300492,
+          0.266486,
+          0.239389,
+          0.21778,
+          0.200538,
+          0.186774,
+          0.175781,
+          0.167,
+          0.159983,
+          0.154375,
+          0.149892,
+          0.146309,
+          0.143443,
+          0.141152,
+          0.139321,
+          0.137856,
+          0.136684,
+          0.135747,
+          0.134998,
+          0.134399,
+          0.133919,
+          0.133536,
+          0.133229,
+          0.132984,
+          0.132788,
+          0.132631,
+          0.132506,
+          0.132405,
+          0.132325,
+          0.132261,
+          0.13221,
+          0.132169,
+          0.132136,
+          0.132109,
+          0.132088,
+          0.132072,
+          0.132058
+        ],
+        "q_dom": [
+          0.209,
+          0.193628,
+          0.181448,
+          0.171778,
+          0.164089,
+          0.157968,
+          0.15309,
+          0.1492,
+          0.146097,
+          0.143619,
+          0.141641,
+          0.14006,
+          0.138797,
+          0.137787,
+          0.136981,
+          0.136336,
+          0.13582,
+          0.135407,
+          0.135078,
+          0.134814,
+          0.134603,
+          0.134434,
+          0.1343,
+          0.134192,
+          0.134105,
+          0.134036,
+          0.133981,
+          0.133937,
+          0.133902,
+          0.133874,
+          0.133851,
+          0.133833,
+          0.133819,
+          0.133807,
+          0.133798,
+          0.13379,
+          0.133784,
+          0.13378,
+          0.133776,
+          0.133773
+        ]
+      },
+      "deep_import_high_absorption": {
+        "final_k": 0.513047,
+        "below_scale_from": 0,
+        "k": [
+          0.540239,
+          0.533059,
+          0.527776,
+          0.523888,
+          0.521027,
+          0.518922,
+          0.517372,
+          0.516231,
+          0.515391,
+          0.514773,
+          0.514317,
+          0.513982,
+          0.513736,
+          0.513554,
+          0.51342,
+          0.513322,
+          0.513249,
+          0.513196,
+          0.513157,
+          0.513128,
+          0.513107,
+          0.513091,
+          0.513079,
+          0.513071,
+          0.513065,
+          0.51306,
+          0.513057,
+          0.513054,
+          0.513052,
+          0.513051,
+          0.51305,
+          0.513049,
+          0.513049,
+          0.513048,
+          0.513048,
+          0.513048,
+          0.513048,
+          0.513047,
+          0.513047,
+          0.513047
+        ],
+        "q_dom": [
+          0.209,
+          0.207243,
+          0.205951,
+          0.205,
+          0.2043,
+          0.203785,
+          0.203406,
+          0.203127,
+          0.202922,
+          0.20277,
+          0.202659,
+          0.202577,
+          0.202517,
+          0.202472,
+          0.20244,
+          0.202416,
+          0.202398,
+          0.202385,
+          0.202375,
+          0.202368,
+          0.202363,
+          0.202359,
+          0.202356,
+          0.202354,
+          0.202353,
+          0.202352,
+          0.202351,
+          0.20235,
+          0.20235,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349,
+          0.202349
+        ]
+      },
+      "guaranteed_floor": {
+        "final_k": 0.305547,
+        "below_scale_from": null,
+        "k": [
+          0.51608,
+          0.486855,
+          0.461674,
+          0.439978,
+          0.421285,
+          0.405179,
+          0.391303,
+          0.379346,
+          0.369045,
+          0.360169,
+          0.352522,
+          0.345933,
+          0.340256,
+          0.335364,
+          0.33115,
+          0.327519,
+          0.32439,
+          0.321694,
+          0.319372,
+          0.317371,
+          0.315647,
+          0.314161,
+          0.312881,
+          0.311779,
+          0.310828,
+          0.31001,
+          0.309304,
+          0.308697,
+          0.308173,
+          0.307722,
+          0.307333,
+          0.306998,
+          0.30671,
+          0.306461,
+          0.306247,
+          0.306062,
+          0.305903,
+          0.305766,
+          0.305648,
+          0.305547
+        ],
+        "q_dom": [
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      }
+    },
+    "absorption_sweep": [
+      {
+        "ac": 0.0,
+        "final_k": 0.269659,
+        "vs_no_import": -0.394887
+      },
+      {
+        "ac": 0.1,
+        "final_k": 0.324232,
+        "vs_no_import": -0.340314
+      },
+      {
+        "ac": 0.2,
+        "final_k": 0.376493,
+        "vs_no_import": -0.288053
+      },
+      {
+        "ac": 0.3,
+        "final_k": 0.426632,
+        "vs_no_import": -0.237914
+      },
+      {
+        "ac": 0.4,
+        "final_k": 0.474817,
+        "vs_no_import": -0.189728
+      },
+      {
+        "ac": 0.5,
+        "final_k": 0.521199,
+        "vs_no_import": -0.143347
+      },
+      {
+        "ac": 0.6,
+        "final_k": 0.56591,
+        "vs_no_import": -0.098635
+      },
+      {
+        "ac": 0.7,
+        "final_k": 0.60907,
+        "vs_no_import": -0.055476
+      },
+      {
+        "ac": 0.8,
+        "final_k": 0.650786,
+        "vs_no_import": -0.01376
+      },
+      {
+        "ac": 0.9,
+        "final_k": 0.691155,
+        "vs_no_import": 0.026609
+      }
+    ],
+    "absorption_break_even": 0.834085,
+    "hysteresis": {
+      "held_final_k": 0.685511,
+      "hollowed_final_k": 0.132058,
+      "start_k": 0.55,
+      "years_of_decline": 14,
+      "years_to_rebuild_to_start": 20.0,
+      "rebuild_over_decline": 1.428571,
+      "held_level_reachable_behind_a_wall": false,
+      "below_scale_from": 0
+    },
+    "deployment": {
+      "learning_deployment": {
+        "final_k": 0.51297,
+        "installed_equal": true,
+        "below_scale_from": 0
+      },
+      "turnkey_deployment": {
+        "final_k": 0.102904,
+        "installed_equal": true,
+        "below_scale_from": 0
+      },
+      "gap": 0.410067
+    }
+  },
+  "topology": {
+    "constants": {
+      "N_SHOCKS": 6000,
+      "BUDGET": 4.0,
+      "POLICY_MIX": {
+        "diffuse": 0.3,
+        "random_node": 0.4,
+        "targeted": 0.3
+      },
+      "CAP_RATE": 0.115,
+      "FRONT_RATE": 0.045
+    },
+    "profile": {
+      "broad": {
+        "n_nodes": 24,
+        "mean_burden": 0.2375,
+        "breadth_above_0_2": 18,
+        "depth_worst_decile": 0.3,
+        "concentration": 0.050323
+      },
+      "deep": {
+        "n_nodes": 24,
+        "mean_burden": 0.2375,
+        "breadth_above_0_2": 4,
+        "depth_worst_decile": 0.9,
+        "concentration": 0.099613
+      }
+    },
+    "losses": {
+      "broad": {
+        "diffuse": {
+          "mean": 0.724897,
+          "p95": 0.921107
+        },
+        "targeted": {
+          "mean": 0.298938,
+          "p95": 0.408132
+        },
+        "random_node": {
+          "mean": 0.237279,
+          "p95": 0.403457
+        }
+      },
+      "deep": {
+        "diffuse": {
+          "mean": 0.149927,
+          "p95": 0.156495
+        },
+        "targeted": {
+          "mean": 0.864621,
+          "p95": 1.0
+        },
+        "random_node": {
+          "mean": 0.233278,
+          "p95": 0.998743
+        }
+      }
+    },
+    "ranking_by_shock": {
+      "diffuse": "broad",
+      "targeted": "deep",
+      "random_node": "broad"
+    },
+    "frontier_path": [
+      {
+        "year": 0,
+        "capability": 0.426667,
+        "frontier": 1.045,
+        "gap": 0.618333,
+        "ratio": 0.408293
+      },
+      {
+        "year": 1,
+        "capability": 0.496949,
+        "frontier": 1.092025,
+        "gap": 0.595076,
+        "ratio": 0.455071
+      },
+      {
+        "year": 2,
+        "capability": 0.562108,
+        "frontier": 1.141166,
+        "gap": 0.579058,
+        "ratio": 0.492573
+      },
+      {
+        "year": 3,
+        "capability": 0.623159,
+        "frontier": 1.192519,
+        "gap": 0.569359,
+        "ratio": 0.522557
+      },
+      {
+        "year": 4,
+        "capability": 0.680927,
+        "frontier": 1.246182,
+        "gap": 0.565255,
+        "ratio": 0.54641
+      },
+      {
+        "year": 5,
+        "capability": 0.736082,
+        "frontier": 1.30226,
+        "gap": 0.566178,
+        "ratio": 0.565234
+      },
+      {
+        "year": 6,
+        "capability": 0.789175,
+        "frontier": 1.360862,
+        "gap": 0.571687,
+        "ratio": 0.579908
+      },
+      {
+        "year": 7,
+        "capability": 0.840661,
+        "frontier": 1.422101,
+        "gap": 0.581439,
+        "ratio": 0.591141
+      },
+      {
+        "year": 8,
+        "capability": 0.890917,
+        "frontier": 1.486095,
+        "gap": 0.595178,
+        "ratio": 0.599502
+      },
+      {
+        "year": 9,
+        "capability": 0.940258,
+        "frontier": 1.552969,
+        "gap": 0.612712,
+        "ratio": 0.605458
+      },
+      {
+        "year": 10,
+        "capability": 0.988946,
+        "frontier": 1.622853,
+        "gap": 0.633907,
+        "ratio": 0.609387
+      },
+      {
+        "year": 11,
+        "capability": 1.037203,
+        "frontier": 1.695881,
+        "gap": 0.658678,
+        "ratio": 0.611601
+      },
+      {
+        "year": 12,
+        "capability": 1.085218,
+        "frontier": 1.772196,
+        "gap": 0.686978,
+        "ratio": 0.612358
+      },
+      {
+        "year": 13,
+        "capability": 1.133151,
+        "frontier": 1.851945,
+        "gap": 0.718794,
+        "ratio": 0.611871
+      },
+      {
+        "year": 14,
+        "capability": 1.181136,
+        "frontier": 1.935282,
+        "gap": 0.754146,
+        "ratio": 0.610317
+      },
+      {
+        "year": 15,
+        "capability": 1.229292,
+        "frontier": 2.02237,
+        "gap": 0.793078,
+        "ratio": 0.607847
+      },
+      {
+        "year": 16,
+        "capability": 1.277718,
+        "frontier": 2.113377,
+        "gap": 0.835659,
+        "ratio": 0.604586
+      },
+      {
+        "year": 17,
+        "capability": 1.326502,
+        "frontier": 2.208479,
+        "gap": 0.881977,
+        "ratio": 0.60064
+      },
+      {
+        "year": 18,
+        "capability": 1.375717,
+        "frontier": 2.30786,
+        "gap": 0.932143,
+        "ratio": 0.596101
+      },
+      {
+        "year": 19,
+        "capability": 1.42543,
+        "frontier": 2.411714,
+        "gap": 0.986284,
+        "ratio": 0.591044
+      },
+      {
+        "year": 20,
+        "capability": 1.475697,
+        "frontier": 2.520241,
+        "gap": 1.044545,
+        "ratio": 0.585538
+      },
+      {
+        "year": 21,
+        "capability": 1.526566,
+        "frontier": 2.633652,
+        "gap": 1.107086,
+        "ratio": 0.579639
+      },
+      {
+        "year": 22,
+        "capability": 1.578082,
+        "frontier": 2.752166,
+        "gap": 1.174084,
+        "ratio": 0.573396
+      },
+      {
+        "year": 23,
+        "capability": 1.630281,
+        "frontier": 2.876014,
+        "gap": 1.245732,
+        "ratio": 0.566855
+      },
+      {
+        "year": 24,
+        "capability": 1.683197,
+        "frontier": 3.005434,
+        "gap": 1.322237,
+        "ratio": 0.560051
+      },
+      {
+        "year": 25,
+        "capability": 1.736858,
+        "frontier": 3.140679,
+        "gap": 1.403821,
+        "ratio": 0.55302
+      },
+      {
+        "year": 26,
+        "capability": 1.79129,
+        "frontier": 3.28201,
+        "gap": 1.49072,
+        "ratio": 0.54579
+      },
+      {
+        "year": 27,
+        "capability": 1.846513,
+        "frontier": 3.4297,
+        "gap": 1.583187,
+        "ratio": 0.538389
+      },
+      {
+        "year": 28,
+        "capability": 1.902546,
+        "frontier": 3.584036,
+        "gap": 1.68149,
+        "ratio": 0.530839
+      },
+      {
+        "year": 29,
+        "capability": 1.959407,
+        "frontier": 3.745318,
+        "gap": 1.785912,
+        "ratio": 0.523162
+      }
+    ],
+    "frontier": {
+      "capability_start": 0.426667,
+      "capability_end": 1.959407,
+      "capability_growth_factor": 4.592359,
+      "gap_start": 0.618333,
+      "gap_end": 1.785912,
+      "ratio_start": 0.408293,
+      "ratio_end": 0.523162,
+      "gap_widened": true,
+      "ratio_improved": true
+    },
+    "policy": {
+      "broad": {
+        "shock_mix": {
+          "diffuse": 0.3,
+          "random_node": 0.4,
+          "targeted": 0.3
+        },
+        "baseline_loss": 0.404127,
+        "by_budget": [
+          {
+            "budget": 2.0,
+            "diversify": 0.060311,
+            "stockpile": 0.092028,
+            "unbox": 0.03474,
+            "relocalize": 0.026869,
+            "best": "stockpile"
+          },
+          {
+            "budget": 4.0,
+            "diversify": 0.14205,
+            "stockpile": 0.089001,
+            "unbox": 0.100777,
+            "relocalize": 0.054834,
+            "best": "diversify"
+          },
+          {
+            "budget": 6.0,
+            "diversify": 0.141828,
+            "stockpile": 0.090525,
+            "unbox": 0.133224,
+            "relocalize": 0.081223,
+            "best": "diversify"
+          },
+          {
+            "budget": 8.0,
+            "diversify": 0.139544,
+            "stockpile": 0.089197,
+            "unbox": 0.191042,
+            "relocalize": 0.112322,
+            "best": "unbox"
+          },
+          {
+            "budget": 10.0,
+            "diversify": 0.142612,
+            "stockpile": 0.090786,
+            "unbox": 0.236839,
+            "relocalize": 0.144233,
+            "best": "unbox"
+          },
+          {
+            "budget": 12.0,
+            "diversify": 0.141807,
+            "stockpile": 0.089874,
+            "unbox": 0.374168,
+            "relocalize": 0.178638,
+            "best": "unbox"
+          }
+        ],
+        "instruments": {
+          "diversify": {
+            "reduction": 0.14205,
+            "reduction_per_unit_spend": 0.035513
+          },
+          "stockpile": {
+            "reduction": 0.089001,
+            "reduction_per_unit_spend": 0.02225
+          },
+          "unbox": {
+            "reduction": 0.100777,
+            "reduction_per_unit_spend": 0.025194
+          },
+          "relocalize": {
+            "reduction": 0.054834,
+            "reduction_per_unit_spend": 0.013709
+          }
+        },
+        "best": "diversify",
+        "worst": "relocalize",
+        "unbox_best_from_budget": 8.0,
+        "relocalize_best_at": [],
+        "relocalize_ever_best": false
+      },
+      "deep": {
+        "shock_mix": {
+          "diffuse": 0.3,
+          "random_node": 0.4,
+          "targeted": 0.3
+        },
+        "baseline_loss": 0.400912,
+        "by_budget": [
+          {
+            "budget": 2.0,
+            "diversify": 0.035326,
+            "stockpile": 0.022194,
+            "unbox": 0.024994,
+            "relocalize": 0.026679,
+            "best": "diversify"
+          },
+          {
+            "budget": 4.0,
+            "diversify": 0.032915,
+            "stockpile": 0.017803,
+            "unbox": 0.045583,
+            "relocalize": 0.055557,
+            "best": "relocalize"
+          },
+          {
+            "budget": 6.0,
+            "diversify": 0.034899,
+            "stockpile": 0.023523,
+            "unbox": 0.07766,
+            "relocalize": 0.094275,
+            "best": "relocalize"
+          },
+          {
+            "budget": 8.0,
+            "diversify": 0.034324,
+            "stockpile": 0.026572,
+            "unbox": 0.305493,
+            "relocalize": 0.130971,
+            "best": "unbox"
+          },
+          {
+            "budget": 10.0,
+            "diversify": 0.036221,
+            "stockpile": 0.02346,
+            "unbox": 0.335655,
+            "relocalize": 0.168596,
+            "best": "unbox"
+          },
+          {
+            "budget": 12.0,
+            "diversify": 0.034136,
+            "stockpile": 0.024053,
+            "unbox": 0.378614,
+            "relocalize": 0.205107,
+            "best": "unbox"
+          }
+        ],
+        "instruments": {
+          "diversify": {
+            "reduction": 0.032915,
+            "reduction_per_unit_spend": 0.008229
+          },
+          "stockpile": {
+            "reduction": 0.017803,
+            "reduction_per_unit_spend": 0.004451
+          },
+          "unbox": {
+            "reduction": 0.045583,
+            "reduction_per_unit_spend": 0.011396
+          },
+          "relocalize": {
+            "reduction": 0.055557,
+            "reduction_per_unit_spend": 0.013889
+          }
+        },
+        "best": "relocalize",
+        "worst": "stockpile",
+        "unbox_best_from_budget": 8.0,
+        "relocalize_best_at": [
+          4.0,
+          6.0
+        ],
+        "relocalize_ever_best": true
+      }
+    }
+  },
+  "cited_records": {
+    "asml_suppliers": {
+      "value": 5100,
+      "source": "ASML 2025 annual report"
+    },
+    "asml_euv_shipped_2025": {
+      "value": 48,
+      "source": "ASML 2025 annual report"
+    },
+    "asml_duv_shipped_2025": {
+      "value": 279,
+      "source": "ASML 2025 annual report (374 in 2024)"
+    },
+    "euv_systems_worldwide": {
+      "value": 314,
+      "source": "Reuters, June 19, 2026, citing an ASML internal presentation; none located in China"
+    },
+    "zeiss_highna_projection_parts": {
+      "value": 40000,
+      "source": "ZEISS, High-NA EUV lithography (more than 40,000)"
+    },
+    "zeiss_highna_illumination_parts": {
+      "value": 25000,
+      "source": "ZEISS (more than 25,000)"
+    },
+    "zeiss_network_partners": {
+      "value": 1200,
+      "source": "ZEISS (more than 1,200 members)"
+    },
+    "bis_equipment_categories": {
+      "value": 24,
+      "source": "Bureau of Industry and Security, December 2, 2024"
+    },
+    "bis_software_categories": {
+      "value": 3,
+      "source": "Bureau of Industry and Security, December 2, 2024"
+    },
+    "iea_china_solar_share_pct": {
+      "value": 85,
+      "source": "IEA Energy Technology Perspectives 2026"
+    },
+    "iea_china_battery_share_pct": {
+      "value": 80,
+      "source": "IEA Energy Technology Perspectives 2026"
+    },
+    "iea_china_wafer_share_pct": {
+      "value": 95,
+      "source": "IEA Energy Technology Perspectives 2026"
+    },
+    "iea_china_anode_share_pct": {
+      "value": 97,
+      "source": "IEA Energy Technology Perspectives 2026"
+    },
+    "iea_battery_interruption_usd_bn_per_month": {
+      "value": 17,
+      "source": "IEA ETP 2026; almost two-thirds of losses in the EU"
+    },
+    "iea_eu_inverter_capacity_gw": {
+      "value": 95,
+      "source": "IEA inverter supply chains commentary, 2025 capacity"
+    },
+    "iea_eu_inverter_demand_gw": {
+      "value": 90,
+      "source": "IEA inverter supply chains commentary"
+    },
+    "iea_inverter_project_premium_pct": {
+      "value": 2,
+      "source": "IEA: just under 2 percent for utility-scale projects"
+    },
+    "exvi_semiconductors_eu": {
+      "value": 0.22,
+      "source": "Connell Garcia and Ho 2025, External Vulnerability Index, BACI 2022"
+    },
+    "exvi_semiconductors_us": {
+      "value": 0.19,
+      "source": "same"
+    },
+    "exvi_semiconductors_cn": {
+      "value": 0.17,
+      "source": "same"
+    },
+    "exvi_all_industrial_eu": {
+      "value": 0.22,
+      "source": "same"
+    },
+    "exvi_all_industrial_us": {
+      "value": 0.28,
+      "source": "same"
+    },
+    "exvi_all_industrial_cn": {
+      "value": 0.13,
+      "source": "same"
+    },
+    "gao_us_capacity_share_1990_pct": {
+      "value": 37,
+      "source": "GAO-26-107882"
+    },
+    "gao_us_capacity_share_2022_pct": {
+      "value": 10,
+      "source": "GAO-26-107882"
+    },
+    "gao_us_memory_share_pct": {
+      "value": 3,
+      "source": "GAO-26-107882, two most common memory types, 2022"
+    },
+    "doe_transformer_price_multiple_low": {
+      "value": 4,
+      "source": "US Department of Energy, grid supply chain"
+    },
+    "doe_transformer_price_multiple_high": {
+      "value": 9,
+      "source": "US Department of Energy, grid supply chain"
+    },
+    "oecd_relocalisation_trade_pct": {
+      "value": 18,
+      "source": "OECD Supply Chain Resilience Review 2025 (over 18 percent)"
+    },
+    "oecd_relocalisation_gdp_pct": {
+      "value": 5,
+      "source": "OECD Supply Chain Resilience Review 2025 (over 5 percent)"
+    },
+    "who_africa_medicine_imports_low_pct": {
+      "value": 70,
+      "source": "Dong and Mirza 2016, Bulletin of the WHO 94: 71-72"
+    },
+    "who_africa_medicine_imports_high_pct": {
+      "value": 90,
+      "source": "Dong and Mirza 2016"
+    },
+    "china_duv_units_2026": {
+      "value": 5,
+      "source": "Reuters, July 28, 2026 (about 5 machines in 2026)"
+    },
+    "china_duv_units_2027": {
+      "value": 20,
+      "source": "Reuters, July 28, 2026 (about 20 in 2027)"
+    }
+  },
+  "checks": {
+    "capability_beats_import_share": true,
+    "capability_beats_trade_index": true,
+    "capability_rank_correlation_high": true,
+    "embargoed_node_is_worst_in_truth": true,
+    "embargoed_node_looks_safest_on_trade": true,
+    "capability_index_catches_embargoed": true,
+    "enclave_invisible_to_trade": true,
+    "capability_index_catches_enclave": true,
+    "ore_overstated_by_trade": true,
+    "embargo_improves_trade_index": true,
+    "embargo_worsens_truth": true,
+    "trade_index_adequate_when_transparent": true,
+    "absorbing_importer_beats_autarky": true,
+    "passive_importer_loses_capability": true,
+    "import_sign_is_conditional": true,
+    "break_even_absorption_interior": true,
+    "deep_low_absorption_falls_below_scale": true,
+    "floor_prevents_commons_collapse": true,
+    "rebuild_takes_longer_than_decline": true,
+    "held_level_unreachable_behind_a_wall": true,
+    "deployment_without_learning_gap": true,
+    "capability_stays_interior": true,
+    "equal_mean_burden_by_construction": true,
+    "broad_has_more_nodes_over_threshold": true,
+    "deep_has_worse_tail": true,
+    "ranking_reverses_with_shock": true,
+    "diffuse_hurts_broad": true,
+    "targeted_hurts_deep": true,
+    "capability_rises_substantially": true,
+    "frontier_gap_widens_anyway": true,
+    "relative_position_still_improves": true,
+    "diversification_wins_under_breadth": true,
+    "unboxing_is_lumpy_under_depth": true,
+    "unboxing_eventually_wins_under_depth": true,
+    "breadth_never_needs_unboxing_first": true,
+    "relocalization_never_best_when_funded": true,
+    "relocalization_wins_only_underfunded": true
+  }
+}
