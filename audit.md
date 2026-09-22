@@ -2,6 +2,18 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-22 — prose revision
+
+Prose rewritten against the house standards. Headings made descriptive (Introduction, Production and knowledge boundaries, Definition of a strategic black box, Comparison of dependence indices, Types of black box, Dynamics of capability loss, Topology of dependence and the frontier, Policy instruments, Regional positions, Objections, Falsification, Conclusion, Reproducibility).
+
+Corrections found during the pass:
+  - The break-even absorptive capacity (0.83) was obtained by linear interpolation between sweep points 0.8 and 0.9. A bisection on the model gives 0.8337; the value stands. New field proliferation.absorption_break_even_exact and invariant break_even_bisection_near_interpolation (38 invariants).
+  - The text said imports build capability above absorptive capacity 0.83 and then cited a "high-absorption importer" with capacity 0.75 beating autarky. The sweep uses no engineering linkage while that arm has linkage 0.5; the text now states the break-even as the no-linkage value and attributes the arm's advantage to linkage.
+  - Mean burden reported as 0.237; the value is 0.2375 exactly, now stated.
+  - Trade-index rank correlation appeared as -0.286 in the body and -0.29 in the abstract; now -0.29 throughout.
+  - The ASML 2025 annual report figures had a bibliography entry but no in-text citation; citation added.
+  - "Fall takes 14 years" is now defined as the time to come within 0.02 of the final level, matching the code.
+
 ## 2026-08-16 — v1, first full draft to publication
 
 Scope: the entire paper, simulation, and evidence base, from the seed chat to publication.

@@ -354,7 +354,18 @@ def run_proliferation() -> dict:
         if a["vs_no_import"] < 0 <= b["vs_no_import"]:
             span = b["vs_no_import"] - a["vs_no_import"]
             crossing = a["ac"] + (0 - a["vs_no_import"]) / span * (b["ac"] - a["ac"])
+            lo_ac, hi_ac = a["ac"], b["ac"]
             break
+    # the interpolated crossing is only a grid estimate; bisect the model
+    crossing_exact = None
+    if crossing is not None:
+        for _ in range(50):
+            mid = 0.5 * (lo_ac + hi_ac)
+            if _capability_path(ac=mid, import_share=0.5)["final_k"] - base < 0:
+                lo_ac = mid
+            else:
+                hi_ac = mid
+        crossing_exact = hi_ac
 
     # hysteresis: the fall is fast and cheap, the climb is slow and dear
     hollow = arms["deep_import_low_absorption"]
@@ -397,6 +408,7 @@ def run_proliferation() -> dict:
                  for k, v in arms.items()},
         "absorption_sweep": sweep,
         "absorption_break_even": crossing,
+        "absorption_break_even_exact": crossing_exact,
         "hysteresis": hysteresis,
         "deployment": deployment,
     }
@@ -703,6 +715,10 @@ def _checks(det: dict, pro: dict, top: dict) -> dict:
                                               < K_INIT)
     c["import_sign_is_conditional"] = (a["deep_import_high_absorption"]["final_k"]
                                        > a["deep_import_low_absorption"]["final_k"])
+    c["break_even_bisection_near_interpolation"] = (
+        pro["absorption_break_even_exact"] is not None
+        and abs(pro["absorption_break_even_exact"]
+                - pro["absorption_break_even"]) < 0.1)
     c["break_even_absorption_interior"] = (pro["absorption_break_even"] is not None
                                            and 0.0 < pro["absorption_break_even"] < 1.0)
     c["deep_low_absorption_falls_below_scale"] = (

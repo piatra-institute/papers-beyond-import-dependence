@@ -1,14 +1,31 @@
 slug: beyond-import-dependence
 web_slug: beyond-import-dependence
-title: "Beyond Import Dependence: Capability Closure and the Measurement of Strategic Black Boxes"
-header: "Beyond Import Dependence"
-created: "2026-08"        # inception month (drives YYYY/MM archive path)
-date: "August 2026"           # publication month, e.g. "May 2026" (shown on web)
+title: 'Beyond Import Dependence: Capability Closure and the Measurement of Strategic Black Boxes'
+header: Beyond Import Dependence
+created: 2026-08
+date: August 2026
 paper_dir: paper
 has_simulation: true
-claims_target: results.json   # results.json | claim-ledger | none
+claims_target: results.json
 repo: git@github.com:piatra-institute/papers-beyond-import-dependence.git
 github: https://github.com/piatra-institute/papers-beyond-import-dependence
-status: published             # draft | built | published
-abstract: |-
-  In June 2026 the sole maker of extreme ultraviolet lithography systems stated that it had never shipped one to China, and that none of the 314 machines operating worldwide is located there (Reuters, 2026a). On any measure of dependence built from trade flows, Chinese exposure to that machine is zero, because nothing is imported and therefore nothing can be cut off. The measure is inverted rather than merely imprecise, and the inversion is systematic. This paper separates import dependence from black-box dependence, defines the second, and builds three mechanisms that price the difference. A node is a strategic black box for a region when it is critical, when access to it can be interrupted by someone else, and when the region cannot credibly specify, verify, modify, produce, qualify, scale, service, or replace it at the required performance, quantity, cost, and horizon. The first mechanism gives 8 canonical node types generative ground truth, derives each one's true expected loss from an explicit shock and recovery process, and scores 3 competing indices against it: a capability index recovers the true ordering exactly at a rank correlation of 1.00, while import share and a concentration-weighted trade index correlate at −0.31 and −0.29, pointing the wrong way. Simulating an embargo on a single node drops its trade index from 0.94 to 0 while its true expected loss rises by a factor of 1.61. The second mechanism makes capability a stock, and finds the sign of an import conditional: at an import share of 0.5 the break-even absorptive capacity is 0.83, above which imports build capability and below which they erode it, with a production floor preventing the commons collapse that follows a fall below minimum efficient scale. The fall takes 14 years and the climb back to the starting level takes 20, and the level of a region that never lost the capability is unreachable behind a protective wall at all. The third mechanism builds 2 regions with identical mean burden of 0.237 and opposite topology, and their loss ranking reverses with the kind of shock, which is the formal case against any scalar dependence index. Selective unboxing is found to be lumpy: below a budget threshold, closing half of a set of chokepoints buys almost nothing, and in that underfunded window even blanket relocalization scores better, though the cited macroeconomic estimates place a cost on relocalization that the model does not charge it. The paper is an argument for measuring capability rather than for closing borders.
+status: published
+abstract: In June 2026 the sole maker of extreme ultraviolet lithography systems stated that it had never
+  shipped one to China and that none of the 314 machines operating worldwide is located there (Reuters,
+  2026a). Trade-based dependence measures therefore score Chinese exposure to that machine as zero, and
+  in general they improve when a border closes. We separate import dependence from black-box dependence.
+  A node is a strategic black box for a region when it is critical, when access to it can be interrupted
+  by others, and when the region cannot credibly specify, verify, modify, produce, qualify, scale, service
+  or replace it at the required performance, quantity, cost and horizon. In a model of 8 canonical node
+  types with generative ground truth, a capability index recovers the true ordering of expected loss exactly
+  (rank correlation 1.00), while import share and a concentration-weighted trade index correlate at −0.31
+  and −0.29. Embargoing one node drops its trade index from 0.94 to 0 while its expected loss rises by
+  a factor of 1.61. Treating capability as a stock, an import share of 0.5 builds capability above an
+  absorptive capacity of 0.83 (without local engineering linkage) and erodes it below; the fall after
+  hollowing takes 14 years and the climb back to the starting level 20. Two regions with identical mean
+  burden of 0.2375 and opposite topology reverse their loss ranking with the type of shock, which argues
+  against any scalar dependence index. The results support measuring capability and do not support closing
+  borders.
+web_blurb: Trade-based dependence indices score an embargoed machine as zero exposure. A capability index
+  recovers true expected loss exactly, shows that imports build or erode capability depending on absorption,
+  and argues against any scalar dependence measure.

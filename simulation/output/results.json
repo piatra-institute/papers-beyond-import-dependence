@@ -748,6 +748,7 @@
       }
     ],
     "absorption_break_even": 0.834085,
+    "absorption_break_even_exact": 0.833723,
     "hysteresis": {
       "held_final_k": 0.685511,
       "hollowed_final_k": 0.132058,
@@ -1380,6 +1381,7 @@
     "absorbing_importer_beats_autarky": true,
     "passive_importer_loses_capability": true,
     "import_sign_is_conditional": true,
+    "break_even_bisection_near_interpolation": true,
     "break_even_absorption_interior": true,
     "deep_low_absorption_falls_below_scale": true,
     "floor_prevents_commons_collapse": true,

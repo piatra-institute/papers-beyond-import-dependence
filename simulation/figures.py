@@ -65,7 +65,7 @@ def plot_detector(res: dict, path: str) -> None:
     ax1.set_yticks(y)
     ax1.set_yticklabels([NODE_LABEL[n] for n in order], fontsize=8.5)
     ax1.set_xlabel("scaled to each measure's own maximum", fontsize=9)
-    ax1.set_title("what each measure sees, against what actually happens",
+    ax1.set_title("measures by node type, ordered by true loss",
                   fontsize=10, color=INK)
     ax1.legend(frameon=False, fontsize=8, loc="lower right")
     ax1.annotate("imports are zero because supply is denied",
@@ -90,7 +90,7 @@ def plot_detector(res: dict, path: str) -> None:
     ax2.set_xticklabels(labels, fontsize=8.5)
     ax2.set_ylim(-0.65, 1.2)
     ax2.set_ylabel("rank correlation with true loss", fontsize=9)
-    ax2.set_title("the trade measures point the wrong way",
+    ax2.set_title("rank correlation with true loss",
                   fontsize=10, color=INK)
     _style(ax2)
     fig.tight_layout()
@@ -120,8 +120,7 @@ def plot_proliferation(res: dict, path: str) -> None:
                  ha="right", va="bottom")
     ax1.set_xlabel("year", fontsize=9)
     ax1.set_ylabel("capability closure", fontsize=9)
-    ax1.set_title("the same import share builds or erodes, "
-                  "depending on absorption", fontsize=10, color=INK)
+    ax1.set_title("capability over time by import regime", fontsize=10, color=INK)
     ax1.legend(frameon=False, fontsize=7.8, loc="center right")
     _style(ax1)
 
@@ -132,12 +131,12 @@ def plot_proliferation(res: dict, path: str) -> None:
     ax2.axhline(0, color=INK, lw=0.9)
     be = pro["absorption_break_even"]
     ax2.axvline(be, color=GREEN, lw=0.9, ls=":")
-    ax2.annotate(f"break-even\nabsorption {be:.2f}", (be, min(dv) * 0.55),
+    ax2.annotate(f"break-even\nabsorption {be:.2f}\n(no linkage)", (be, min(dv) * 0.55),
                  fontsize=8, color=GREEN, ha="right",
                  xytext=(-6, 0), textcoords="offset points")
     ax2.set_xlabel("absorptive capacity", fontsize=9)
     ax2.set_ylabel("capability gained against closure", fontsize=9)
-    ax2.set_title("the sign of an import", fontsize=10, color=INK)
+    ax2.set_title("capability change against absorptive capacity", fontsize=10, color=INK)
     _style(ax2)
     fig.tight_layout()
     fig.savefig(path, dpi=200, bbox_inches="tight")
@@ -169,7 +168,7 @@ def plot_topology(res: dict, path: str) -> None:
     ax1.set_ylabel("mean output loss", fontsize=9)
     ax1.set_ylim(0, 1.05)
     mb = top["profile"]["broad"]["mean_burden"]
-    ax1.set_title(f"equal mean burden ({mb:.3f}), opposite rankings",
+    ax1.set_title(f"loss by shock type at equal mean burden ({mb:.4f})",
                   fontsize=9.5, color=INK)
     ax1.legend(frameon=False, fontsize=8, loc="upper left")
     _style(ax1)
@@ -189,7 +188,7 @@ def plot_topology(res: dict, path: str) -> None:
                  (yr[-1], 0.5), fontsize=7.8, color=INK, ha="right")
     ax2.set_xlabel("year", fontsize=9)
     ax2.set_ylabel("capability level", fontsize=9)
-    ax2.set_title("closing in ratio, falling behind in distance",
+    ax2.set_title("capability and frontier over time",
                   fontsize=9.5, color=INK)
     ax2.legend(frameon=False, fontsize=8, loc="upper left")
     _style(ax2)
@@ -208,11 +207,11 @@ def plot_topology(res: dict, path: str) -> None:
                  alpha=0.35)
     ub = top["policy"]["deep"]["unbox_best_from_budget"]
     ax3.axvline(ub, color=GREEN, lw=0.8, ls=":")
-    ax3.annotate("half a chokepoint\nbuys nothing", (ub - 0.25, 0.055),
+    ax3.annotate("partial unboxing:\nlittle gain", (ub - 0.25, 0.055),
                  fontsize=7.5, color=GREEN, ha="right", va="bottom")
     ax3.set_xlabel("budget (bold: depth region, faint: breadth)", fontsize=8.5)
     ax3.set_ylabel("loss avoided", fontsize=9)
-    ax3.set_title("the right instrument depends on the topology",
+    ax3.set_title("loss avoided against budget by instrument",
                   fontsize=9.5, color=INK)
     ax3.legend(frameon=False, fontsize=7.5, loc="upper left")
     _style(ax3)

@@ -1,0 +1,21 @@
+{
+  "pdf_sha256": "500b625e2848c2e7dad76d079cb6389775ceea14c5c72c27b790e667dabfd2f3",
+  "page_count": 13,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "all_pages_inspected": true,
+  "notes": "All 13 pages inspected after the prose revision; figure titles replaced with descriptive ones; break-even annotation now states the no-linkage condition. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (c8fbb71fd04e to 500b625e2848); the rendered text is byte-for-byte identical and no page was re-inspected."
+}
