@@ -1,10 +1,10 @@
 {
-  "manuscript_sha256": "56e76b9b9dcf254f0313921c2e6b615d46f1cee0b79c251d72f7d53125b1b846",
+  "manuscript_sha256": "8dda89f14a682b33f86fd28b9c130f518f3f174c0fe532e0bace0fe03ef82e9f",
   "full_read": true,
   "argument_review": true,
   "structure_review": true,
   "voice_review": true,
   "source_review": true,
   "final_read": true,
-  "notes": "Prose revision: descriptive headings; 'rather than' 22 -> 0 and 'this paper' 8 -> 0; abstract rewritten (249 words); aphoristic lines removed; an internal inconsistency about the absorption break-even resolved by stating the linkage condition; mean burden stated exactly (0.2375); rank correlation rounded consistently (-0.29); the ASML annual report given an in-text citation."
+  "notes": "Structured-evidence migration: inline bibliography converted to references.yaml (CSL) with Pandoc [@id] citations; claims.yaml ledger and execution receipt added. One sentence corrected against its source (Dong and Mirza 2016: 79 percent, not 70 to 90 percent); prose otherwise unchanged."
 }

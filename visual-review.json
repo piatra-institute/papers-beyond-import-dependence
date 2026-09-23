@@ -1,6 +1,6 @@
 {
-  "pdf_sha256": "500b625e2848c2e7dad76d079cb6389775ceea14c5c72c27b790e667dabfd2f3",
-  "page_count": 13,
+  "pdf_sha256": "9b6ac1b9784a0db8989db4c8be2d8be3aca84525e76a1b062061fb42dbd1c8e7",
+  "page_count": 14,
   "pages_inspected": [
     1,
     2,
@@ -14,8 +14,9 @@
     10,
     11,
     12,
-    13
+    13,
+    14
   ],
   "all_pages_inspected": true,
-  "notes": "All 13 pages inspected after the prose revision; figure titles replaced with descriptive ones; break-even annotation now states the no-linkage condition. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (c8fbb71fd04e to 500b625e2848); the rendered text is byte-for-byte identical and no page was re-inspected."
+  "notes": "All 14 pages inspected after the migration; citations, figures and the citeproc reference list render correctly, no unresolved keys. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (c437d6c3d510 to 9b6ac1b9784a); the rendered text is byte-for-byte identical and no page was re-inspected."
 }

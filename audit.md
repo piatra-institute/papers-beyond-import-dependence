@@ -2,6 +2,17 @@
 
 Dated log of editorial passes and verification runs. Newest first.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 30 CSL entries. 14 with DOIs resolved through doi.org content negotiation (10 matched automatically in Crossref; brusoni2001, carvalho2021, dong2016 and oecd2025 assigned by hand from Crossref searches). 16 entered by hand: nelson1982, pisano2012, polanyi1966 (books) and asml2026, bis2024, cpc2025, doe2025, gao2025, iea2026a, iea2026b, reuters2026a-c, safran2026, unido2026, zeiss2026 (institutional and press sources, with URLs). Organisation ids renamed (bureau2024 -> bis2024, central2025 -> cpc2025, department2025 -> doe2025, government2025 -> gao2025, international2026a/b -> iea2026b/a, organisation2025 -> oecd2025, united2026 -> unido2026, carl2026 -> zeiss2026). Citeproc orders the two IEA 2026 works by title, so the inverter commentary renders as 2026a and the ETP chapter as 2026b (swapped relative to the legacy letters); ids follow the rendered letters.
+- Correction: Dong and Mirza (2016) figure "as much as 70 to 90 percent of medicines consumed in most of sub-Saharan Africa" -> "an estimated 79 percent of pharmaceuticals used in Africa" (PMC4709802 full text); the requirements clause now names what the editorial names (regulatory authority, quality-assurance systems, trained people). The cited record in simulation/analyses.py changed accordingly (who_africa_medicine_imports_low/high_pct 70/90 -> who_africa_pharmaceuticals_imported_pct 79); the rerun changed only that cited record in results.json.
+- Correction: acemoglu2012 DOI record has no authors; authors entered from the article. Connell Garcia's name split corrected (family Connell Garcia). Titles cleaned of footnote asterisks.
+- claims.yaml: 75 claims (48 computation, 19 source, 2 definition, 2 assumption, 3 interpretation, 1 normative); computation claims bound to simulation/output/results.json run model. Source claims checked against Crossref/OpenAlex abstracts, PMC full text, and the institutional pages and PDFs (ASML annual report, ZEISS, BIS, GAO via Internet Archive, DOE, IEA x2, CPC recommendations, UNIDO report, EC EXVI brief).
+- Source statements not bound: Reuters 2026a-c (314 EUV systems, none in China; executives' bottleneck list; roughly 5 and 20 DUV tools) because Reuters refuses automated access and the articles are not archived; OECD relocalisation costs (over 18 percent of trade, over 5 percent of output) because oecd.org returned 403; the EU/US/China EXVI scores (0.22, 0.28, 0.13; 0.22, 0.19, 0.17), which sit in figures of the EC brief; Safran LEAP-1C and the C919 licence episode; Teece, Henderson and Clark, Polanyi, Nelson and Winter, Pisano and Shih (books or no abstract).
+- Execution receipt: run id model (uv run python run_all.py), 38/38 invariants.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-22 — prose revision
 
 Prose rewritten against the house standards. Headings made descriptive (Introduction, Production and knowledge boundaries, Definition of a strategic black box, Comparison of dependence indices, Types of black box, Dynamics of capability loss, Topology of dependence and the frontier, Policy instruments, Regional positions, Objections, Falsification, Conclusion, Reproducibility).

@@ -1,0 +1,431 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: acemoglu2012
+  type: article-journal
+  title: The Network Origins of Aggregate Fluctuations
+  container-title: Econometrica
+  volume: '80'
+  issue: '5'
+  page: 1977-2016
+  DOI: 10.3982/ecta9623
+  issued:
+    date-parts:
+    - - 2012
+  author:
+  - family: Acemoglu
+    given: Daron
+  - family: Carvalho
+    given: Vasco M.
+  - family: Ozdaglar
+    given: Asuman
+  - family: Tahbaz-Salehi
+    given: Alireza
+- id: asml2026
+  type: report
+  title: ASML 2025 Annual Report
+  author:
+  - literal: ASML Holding N.V.
+  publisher: ASML Holding N.V.
+  publisher-place: Veldhoven
+  URL: https://www.asml.com/investors/annual-report/2025
+  issued:
+    date-parts:
+    - - 2026
+- id: barrot2016
+  type: article-journal
+  title: Input Specificity and the Propagation of Idiosyncratic Shocks in Production Networks
+  author:
+  - given: Jean-Noël
+    family: Barrot
+  - given: Julien
+    family: Sauvagnat
+  container-title: The Quarterly Journal of Economics
+  volume: '131'
+  issue: '3'
+  page: 1543-1592
+  DOI: 10.1093/qje/qjw018
+  issued:
+    date-parts:
+    - - 2016
+- id: brusoni2001
+  type: article-journal
+  title: 'Knowledge Specialization, Organizational Coupling, and the Boundaries of the Firm: Why Do Firms
+    Know More than They Make?'
+  author:
+  - given: Stefano
+    family: Brusoni
+  - given: Andrea
+    family: Prencipe
+  - given: Keith
+    family: Pavitt
+  container-title: Administrative Science Quarterly
+  volume: '46'
+  issue: '4'
+  page: 597-621
+  DOI: 10.2307/3094825
+  URL: http://dx.doi.org/10.2307/3094825
+  issued:
+    date-parts:
+    - - 2001
+- id: bis2024
+  type: webpage
+  title: Commerce Strengthens Export Controls to Restrict China's Capability to Produce Advanced Semiconductors
+    for Military Applications
+  genre: Press release
+  author:
+  - literal: Bureau of Industry and Security
+  container-title: United States Department of Commerce
+  URL: https://www.bis.gov/press-release/commerce-strengthens-export-controls-restrict-chinas-capability-produce-advanced-semiconductors-military
+  issued:
+    date-parts:
+    - - 2024
+      - 12
+      - 2
+- id: carvalho2021
+  type: article-journal
+  title: 'Supply Chain Disruptions: Evidence from the Great East Japan Earthquake'
+  author:
+  - given: Vasco M
+    family: Carvalho
+  - given: Makoto
+    family: Nirei
+  - given: Yukiko U
+    family: Saito
+  - given: Alireza
+    family: Tahbaz-Salehi
+  container-title: The Quarterly Journal of Economics
+  volume: '136'
+  issue: '2'
+  page: 1255-1321
+  DOI: 10.1093/qje/qjaa044
+  URL: http://dx.doi.org/10.1093/qje/qjaa044
+  issued:
+    date-parts:
+    - - 2021
+- id: cpc2025
+  type: report
+  title: Recommendations of the Central Committee of the Communist Party of China for Formulating the
+    15th Five-Year Plan for National Economic and Social Development
+  author:
+  - literal: Central Committee of the Communist Party of China
+  publisher-place: Beijing
+  URL: https://www.fujian.gov.cn/english/news/202510/t20251030_7028041.htm
+  issued:
+    date-parts:
+    - - 2025
+      - 10
+- id: cohen1990
+  type: article-journal
+  title: 'Absorptive Capacity: A New Perspective on Learning and Innovation'
+  author:
+  - given: Wesley M.
+    family: Cohen
+  - given: Daniel A.
+    family: Levinthal
+  container-title: Administrative Science Quarterly
+  volume: '35'
+  issue: '1'
+  page: 128-152
+  DOI: 10.2307/2393553
+  issued:
+    date-parts:
+    - - 1990
+- id: connell2025
+  type: article-journal
+  title: 'External Vulnerability Index: A Tool to Assess Trade Weaknesses'
+  author:
+  - family: Connell Garcia
+    given: William
+  - family: Ho
+    given: Victor
+  container-title: Intereconomics
+  volume: '60'
+  issue: '1'
+  page: 40-45
+  DOI: 10.2478/ie-2025-0008
+  issued:
+    date-parts:
+    - - 2025
+- id: doe2025
+  type: webpage
+  title: Strengthening America's Grid Supply Chain
+  author:
+  - literal: Department of Energy
+  container-title: United States Department of Energy, Office of Electricity
+  URL: https://www.energy.gov/oe/articles/strengthening-americas-grid-supply-chain
+  issued:
+    date-parts:
+    - - 2025
+- id: dong2016
+  type: article-journal
+  title: Supporting the production of pharmaceuticals in Africa
+  author:
+  - given: Jicui
+    family: Dong
+  - given: Zafar
+    family: Mirza
+  container-title: Bulletin of the World Health Organization
+  volume: '94'
+  issue: '1'
+  page: 71-72
+  DOI: 10.2471/blt.15.163782
+  URL: http://dx.doi.org/10.2471/blt.15.163782
+  issued:
+    date-parts:
+    - - 2016
+- id: farrell2019
+  type: article-journal
+  title: 'Weaponized Interdependence: How Global Economic Networks Shape State Coercion'
+  author:
+  - given: Henry
+    family: Farrell
+  - given: Abraham L.
+    family: Newman
+  container-title: International Security
+  volume: '44'
+  issue: '1'
+  page: 42-79
+  DOI: 10.1162/isec_a_00351
+  issued:
+    date-parts:
+    - - 2019
+- id: gereffi2005
+  type: article-journal
+  title: The governance of global value chains
+  author:
+  - given: Gary
+    family: Gereffi
+  - given: John
+    family: Humphrey
+  - given: Timothy
+    family: Sturgeon
+  container-title: Review of International Political Economy
+  volume: '12'
+  issue: '1'
+  page: 78-104
+  DOI: 10.1080/09692290500049805
+  issued:
+    date-parts:
+    - - 2005
+- id: gao2025
+  type: report
+  title: 'Semiconductors: Information on Projects Funded to Strengthen U.S. Supply Chain'
+  author:
+  - literal: Government Accountability Office
+  number: GAO-26-107882
+  publisher: United States Government Accountability Office
+  publisher-place: Washington, DC
+  URL: https://www.gao.gov/products/gao-26-107882
+  issued:
+    date-parts:
+    - - 2025
+      - 12
+      - 11
+- id: henderson1990
+  type: article-journal
+  title: 'Architectural Innovation: The Reconfiguration of Existing Product Technologies and the Failure
+    of Established Firms'
+  author:
+  - given: Rebecca M.
+    family: Henderson
+  - given: Kim B.
+    family: Clark
+  container-title: Administrative Science Quarterly
+  volume: '35'
+  issue: '1'
+  page: 9-30
+  DOI: 10.2307/2393549
+  issued:
+    date-parts:
+    - - 1990
+- id: iea2026b
+  type: chapter
+  title: Supply Chain Risks and Industrial Competitiveness
+  author:
+  - literal: International Energy Agency
+  container-title: Energy Technology Perspectives 2026
+  publisher: International Energy Agency
+  publisher-place: Paris
+  URL: https://www.iea.org/reports/energy-technology-perspectives-2026/supply-chain-risks-and-industrial-competitiveness
+  issued:
+    date-parts:
+    - - 2026
+- id: iea2026a
+  type: webpage
+  title: Inverter Supply Chains and Cybersecurity
+  genre: Commentary
+  author:
+  - literal: International Energy Agency
+  container-title: IEA
+  URL: https://www.iea.org/commentaries/inverter-supply-chains-and-cybersecurity
+  issued:
+    date-parts:
+    - - 2026
+      - 7
+      - 29
+- id: kapoor2012
+  type: article-journal
+  title: 'What Firms Make vs. What They Know: How Firms'' Production and Knowledge Boundaries Affect Competitive
+    Advantage in the Face of Technological Change'
+  author:
+  - given: Rahul
+    family: Kapoor
+  - given: Ron
+    family: Adner
+  container-title: Organization Science
+  volume: '23'
+  issue: '5'
+  page: 1227-1248
+  DOI: 10.1287/orsc.1110.0686
+  issued:
+    date-parts:
+    - - 2012
+- id: nelson1982
+  type: book
+  title: An Evolutionary Theory of Economic Change
+  author:
+  - family: Nelson
+    given: Richard R.
+  - family: Winter
+    given: Sidney G.
+  publisher: Harvard University Press
+  publisher-place: Cambridge, MA
+  issued:
+    date-parts:
+    - - 1982
+- id: oecd2025
+  type: book
+  title: 'OECD Supply Chain Resilience Review: Navigating Risks'
+  author:
+  - literal: OECD
+  publisher: OECD Publishing
+  DOI: 10.1787/94e3a8ea-en
+  URL: http://dx.doi.org/10.1787/94e3a8ea-en
+  issued:
+    date-parts:
+    - - 2025
+  publisher-place: Paris
+- id: pisano2012
+  type: book
+  title: 'Producing Prosperity: Why America Needs a Manufacturing Renaissance'
+  author:
+  - family: Pisano
+    given: Gary P.
+  - family: Shih
+    given: Willy C.
+  publisher: Harvard Business Review Press
+  publisher-place: Boston
+  issued:
+    date-parts:
+    - - 2012
+- id: polanyi1966
+  type: book
+  title: The Tacit Dimension
+  author:
+  - family: Polanyi
+    given: Michael
+  publisher: Routledge and Kegan Paul
+  publisher-place: London
+  issued:
+    date-parts:
+    - - 1966
+- id: reuters2026a
+  type: article-newspaper
+  title: ASML denies selling EUV chipmaking tool to China after report of US concern
+  author:
+  - literal: Reuters
+  container-title: Reuters
+  URL: https://www.reuters.com/world/china/us-tells-asml-it-is-concerned-china-may-have-top-chip-tool-bloomberg-news-2026-06-19/
+  issued:
+    date-parts:
+    - - 2026
+      - 6
+      - 19
+- id: reuters2026b
+  type: article-newspaper
+  title: China's top chip bosses urge supportive policies to create "China's ASML"
+  author:
+  - literal: Reuters
+  container-title: Reuters
+  URL: https://www.reuters.com/world/china/chinas-top-chip-bosses-urge-supportive-policies-create-chinas-asml-2026-03-05/
+  issued:
+    date-parts:
+    - - 2026
+      - 3
+      - 5
+- id: reuters2026c
+  type: article-newspaper
+  title: China starts production of home-grown immersion DUV chipmaking tools, source says
+  author:
+  - literal: Reuters
+  container-title: Reuters
+  URL: https://www.reuters.com/world/china/china-starts-production-home-grown-immersion-duv-chipmaking-tools-source-2026-07-28/
+  issued:
+    date-parts:
+    - - 2026
+      - 7
+      - 28
+- id: safran2026
+  type: webpage
+  title: 'LEAP-1C: New Generation Engine for Single-Aisle Commercial Jets'
+  author:
+  - literal: Safran
+  container-title: Safran Aircraft Engines
+  URL: https://www.safran-group.com/products-services/leap-1c-new-generation-engine-single-aisle-commercial-jets
+  issued:
+    date-parts:
+    - - 2026
+- id: sturgeon2002
+  type: article-journal
+  title: 'Modular production networks: a new American model of industrial organization'
+  author:
+  - given: T. J.
+    family: Sturgeon
+  container-title: Industrial and Corporate Change
+  volume: '11'
+  issue: '3'
+  page: 451-496
+  DOI: 10.1093/icc/11.3.451
+  issued:
+    date-parts:
+    - - 2002
+- id: teece1986
+  type: article-journal
+  title: 'Profiting from technological innovation: Implications for integration, collaboration, licensing
+    and public policy'
+  author:
+  - given: David J.
+    family: Teece
+  container-title: Research Policy
+  volume: '15'
+  issue: '6'
+  page: 285-305
+  DOI: 10.1016/0048-7333(86)90027-2
+  issued:
+    date-parts:
+    - - 1986
+- id: unido2026
+  type: report
+  title: 'Industrial Development Report 2026: The Future of Industrialization. Latin America and the Caribbean
+    Regional Report'
+  author:
+  - literal: United Nations Industrial Development Organization
+  publisher: UNIDO
+  publisher-place: Vienna
+  URL: https://www.unido.org/sites/default/files/unido-publications/2026-07/IDR%20Regional%20Report%20LAC%20in%20English.pdf
+  issued:
+    date-parts:
+    - - 2026
+- id: zeiss2026
+  type: webpage
+  title: 'High-NA-EUV Lithography: The Next EUV Generation'
+  author:
+  - literal: Carl Zeiss SMT
+  container-title: ZEISS Semiconductor Manufacturing Technology
+  URL: https://www.zeiss.com/semiconductor-manufacturing-technology/inspiring-technology/high-na-euv-lithography.html
+  issued:
+    date-parts:
+    - - 2026

@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "id": "model",
+  "started": "2026-09-23T03:50:38.706657+00:00",
+  "finished": "2026-09-23T03:50:44.216114+00:00",
+  "command": [
+    "uv",
+    "run",
+    "python",
+    "run_all.py"
+  ],
+  "cwd": "simulation",
+  "runtime": {
+    "scope": "recorder",
+    "python": "3.12.4 (v3.12.4:8e8a4baf65, Jun  6 2024, 17:33:18) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "platform": "macOS-15.1-arm64-arm-64bit"
+  },
+  "execution_result": null,
+  "execution": {
+    "status": "PASS",
+    "exit_code": 0,
+    "detail": "command completed"
+  },
+  "input_scope": "execution-v1",
+  "additional_inputs": [],
+  "inputs": {
+    "simulation/analyses.py": "993500a1e473f4e8e1ccbc3708035e541d762ba92719bbc03145f60e01758df0",
+    "simulation/figures.py": "d9bb2542d3f01d05a37d9b4ed570c6ab2608a2dbdf53b883d7c154360944fb34",
+    "simulation/pyproject.toml": "c90109127669ea8aa67e8c5d7005987b0f75666ae8cd279d80da84b98abcc4a3",
+    "simulation/run_all.py": "6e559a86bce0614adf685abdd3bab521253680f8dc024451475c5aed6b79a7c9",
+    "simulation/uv.lock": "9277e5573b2258fad479cfdf456f3d87c018771645b837478f8d67fc1ad3ffac"
+  },
+  "artifacts": {
+    "simulation/output/results.json": "2f0ccbfc244304d80f9686bd196f75012c8dcf67f00de376232bf0e088edfe25"
+  }
+}

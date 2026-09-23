@@ -1,0 +1,843 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: 8dda89f14a682b33f86fd28b9c130f518f3f174c0fe532e0bace0fe03ef82e9f
+claims:
+- id: abs-cap-rho
+  kind: computation
+  passage: In a model of 8 canonical node types with generative ground truth, a capability index recovers the true
+    ordering of expected loss exactly (rank correlation 1.00), while import share and a concentration-weighted trade
+    index correlate at −0.31 and −0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/capability_burden
+    reported: '1.00'
+    units: Spearman rank correlation with true loss
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: abs-import-rho
+  kind: computation
+  passage: In a model of 8 canonical node types with generative ground truth, a capability index recovers the true
+    ordering of expected loss exactly (rank correlation 1.00), while import share and a concentration-weighted trade
+    index correlate at −0.31 and −0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/import_share
+    reported: −0.31
+    units: Spearman rank correlation with true loss
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: abs-trade-rho
+  kind: computation
+  passage: In a model of 8 canonical node types with generative ground truth, a capability index recovers the true
+    ordering of expected loss exactly (rank correlation 1.00), while import share and a concentration-weighted trade
+    index correlate at −0.31 and −0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/trade_index
+    reported: −0.29
+    units: Spearman rank correlation with true loss
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: abs-embargo-trade
+  kind: computation
+  passage: Embargoing one node drops its trade index from 0.94 to 0 while its expected loss rises by a factor of
+    1.61.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/trade_index_before
+    reported: '0.94'
+    units: trade index
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: abs-embargo-ratio
+  kind: computation
+  passage: Embargoing one node drops its trade index from 0.94 to 0 while its expected loss rises by a factor of
+    1.61.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/truth_ratio
+    reported: '1.61'
+    units: ratio of expected loss after/before embargo
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: abs-breakeven
+  kind: computation
+  passage: Treating capability as a stock, an import share of 0.5 builds capability above an absorptive capacity
+    of 0.83 (without local engineering linkage) and erodes it below; the fall after hollowing takes 14 years and
+    the climb back to the starting level 20.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/absorption_break_even_exact
+    reported: '0.83'
+    units: absorptive capacity at which imports neither build nor erode capability
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model; no engineering linkage; bisection'
+    decimals: 2
+- id: abs-decline
+  kind: computation
+  passage: Treating capability as a stock, an import share of 0.5 builds capability above an absorptive capacity
+    of 0.83 (without local engineering linkage) and erodes it below; the fall after hollowing takes 14 years and
+    the climb back to the starting level 20.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/hysteresis/years_of_decline
+    reported: '14'
+    units: years
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 0
+- id: abs-rebuild
+  kind: computation
+  passage: Treating capability as a stock, an import share of 0.5 builds capability above an absorptive capacity
+    of 0.83 (without local engineering linkage) and erodes it below; the fall after hollowing takes 14 years and
+    the climb back to the starting level 20.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/hysteresis/years_to_rebuild_to_start
+    reported: '20'
+    units: years
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 0
+- id: abs-mean-burden
+  kind: computation
+  passage: Two regions with identical mean burden of 0.2375 and opposite topology reverse their loss ranking with
+    the type of shock, which argues against any scalar dependence index.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/profile/broad/mean_burden
+    reported: '0.2375'
+    units: mean burden
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 4
+- id: horizon
+  kind: computation
+  passage: 'An explicit process generates the expected discounted output loss over a 10-year horizon: interruptions
+    arrive, an existing alternative is switched in quickly, the region rebuilds slowly if it can, and otherwise
+    the loss continues to the end of the horizon.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/constants/HORIZON
+    reported: '10'
+    units: years
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 0
+- id: cap-rho
+  kind: computation
+  passage: The capability index recovers the true ordering exactly, with a rank correlation of 1.00 (Figure 1).
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/capability_burden
+    reported: '1.00'
+    units: Spearman rank correlation
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: import-rho
+  kind: computation
+  passage: Import share and the trade index score −0.31 and −0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/import_share
+    reported: −0.31
+    units: Spearman rank correlation
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: trade-rho
+  kind: computation
+  passage: Import share and the trade index score −0.31 and −0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/spearman_vs_truth/trade_index
+    reported: −0.29
+    units: Spearman rank correlation
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: embargo-last
+  kind: computation
+  passage: The embargoed frontier tool ranks first in true loss and last of 8 on the trade index.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/diagnostics/embargoed_trade_rank
+    reported: '8'
+    units: rank on the trade index
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 0
+- id: supplied-trade
+  kind: computation
+  passage: The same tool, while supplied, has a trade index of 0.94 and an expected loss of 3.97.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/trade_index_before
+    reported: '0.94'
+    units: trade index
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: supplied-loss
+  kind: computation
+  passage: The same tool, while supplied, has a trade index of 0.94 and an expected loss of 3.97.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/truth_before
+    reported: '3.97'
+    units: expected discounted output loss
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: embargo-trade-0
+  kind: computation
+  passage: Embargoed, its trade index falls to 0 and its expected loss rises to 6.39, a factor of 1.61.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/trade_index_after
+    reported: '0'
+    units: trade index
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 0
+- id: embargo-loss
+  kind: computation
+  passage: Embargoed, its trade index falls to 0 and its expected loss rises to 6.39, a factor of 1.61.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/truth_after
+    reported: '6.39'
+    units: expected discounted output loss
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: embargo-ratio
+  kind: computation
+  passage: Embargoed, its trade index falls to 0 and its expected loss rises to 6.39, a factor of 1.61.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/embargo_episode/truth_ratio
+    reported: '1.61'
+    units: ratio
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: transparent-rho
+  kind: computation
+  passage: Restricted to the four transparent nodes (the documented commodity, the white-box import, the understood
+    ore and the midstream material), the trade index reaches a rank correlation of 0.80.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /detector/transparent_subset_spearman/trade_index
+    reported: '0.80'
+    units: Spearman rank correlation on the four transparent nodes
+    conditions: 'mechanism 1: 8 node types, 4000 draws per node, seed 20260816, 10-year horizon, 5% discount'
+    decimals: 2
+- id: breakeven
+  kind: computation
+  passage: 'Without local engineering linkage, at an import share of 0.5, the break-even absorptive capacity is
+    0.83: above it, importing half of consumption leaves a region more capable than closing the border entirely,
+    and below it the same import share erodes capability.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/absorption_break_even_exact
+    reported: '0.83'
+    units: absorptive capacity
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model; import share 0.5, no linkage'
+    decimals: 2
+- id: absorbing
+  kind: computation
+  passage: An importer with absorptive capacity 0.75 and engineering linkage 0.5 at the same share ends at 0.686,
+    against 0.665 under autarky, so openness with absorption outperforms closure.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/absorbing_importer/final_k
+    reported: '0.686'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: autarky
+  kind: computation
+  passage: An importer with absorptive capacity 0.75 and engineering linkage 0.5 at the same share ends at 0.686,
+    against 0.665 under autarky, so openness with absorption outperforms closure.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/autarkic/final_k
+    reported: '0.665'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: passive
+  kind: computation
+  passage: A passive importer at the same share ends at 0.351, and a deep importer at a share of 0.8 with low absorption
+    falls to 0.132.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/passive_importer/final_k
+    reported: '0.351'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: deep-low
+  kind: computation
+  passage: A passive importer at the same share ends at 0.351, and a deep importer at a share of 0.8 with low absorption
+    falls to 0.132.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/deep_import_low_absorption/final_k
+    reported: '0.132'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: floor-level
+  kind: computation
+  passage: A guaranteed production floor at 0.40 of demand, the modelled form of a procurement commitment, keeps
+    the same region above the scale threshold and ends it at 0.306 instead of 0.132; the floor does not make the
+    region a leader, but it keeps the commons alive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/guaranteed_floor/q_dom/0
+    reported: '0.40'
+    units: domestic production as a share of demand
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 2
+- id: floor-final
+  kind: computation
+  passage: A guaranteed production floor at 0.40 of demand, the modelled form of a procurement commitment, keeps
+    the same region above the scale threshold and ends it at 0.306 instead of 0.132; the floor does not make the
+    region a leader, but it keeps the commons alive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/guaranteed_floor/final_k
+    reported: '0.306'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: floor-vs
+  kind: computation
+  passage: A guaranteed production floor at 0.40 of demand, the modelled form of a procurement commitment, keeps
+    the same region above the scale threshold and ends it at 0.306 instead of 0.132; the floor does not make the
+    region a leader, but it keeps the commons alive.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/arms/deep_import_low_absorption/final_k
+    reported: '0.132'
+    units: final capability stock
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 3
+- id: decline-years
+  kind: computation
+  passage: The fall from the starting level takes 14 years to come within 0.02 of its final value.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/hysteresis/years_of_decline
+    reported: '14'
+    units: years
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 0
+- id: rebuild-years
+  kind: computation
+  passage: The climb back to the starting level, behind a protected market and a large public programme, takes 20
+    years, a factor of 1.43.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/hysteresis/years_to_rebuild_to_start
+    reported: '20'
+    units: years
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 0
+- id: rebuild-ratio
+  kind: computation
+  passage: The climb back to the starting level, behind a protected market and a large public programme, takes 20
+    years, a factor of 1.43.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/hysteresis/rebuild_over_decline
+    reported: '1.43'
+    units: ratio
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 2
+- id: deploy-years
+  kind: computation
+  passage: After 40 years their capability differs by 0.41 on a scale with maximum 1.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/constants/YEARS
+    reported: '40'
+    units: years
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 0
+- id: deploy-gap
+  kind: computation
+  passage: After 40 years their capability differs by 0.41 on a scale with maximum 1.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /proliferation/deployment/gap
+    reported: '0.41'
+    units: capability difference
+    conditions: 'mechanism 2: deterministic 40-year capability-stock model'
+    decimals: 2
+- id: topo-mean
+  kind: computation
+  passage: 'The third mechanism builds two regions with an identical mean burden of 0.2375 and opposite topology:
+    one with 18 of 24 nodes above a moderate threshold, linked through shared upstream clusters, and one nearly
+    closed except for 4 frontier nodes at extreme burden.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/profile/deep/mean_burden
+    reported: '0.2375'
+    units: mean burden
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 4
+- id: topo-breadth
+  kind: computation
+  passage: 'The third mechanism builds two regions with an identical mean burden of 0.2375 and opposite topology:
+    one with 18 of 24 nodes above a moderate threshold, linked through shared upstream clusters, and one nearly
+    closed except for 4 frontier nodes at extreme burden.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/profile/broad/breadth_above_0_2
+    reported: '18'
+    units: nodes above 0.2
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 0
+- id: topo-nodes
+  kind: computation
+  passage: 'The third mechanism builds two regions with an identical mean burden of 0.2375 and opposite topology:
+    one with 18 of 24 nodes above a moderate threshold, linked through shared upstream clusters, and one nearly
+    closed except for 4 frontier nodes at extreme burden.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/profile/broad/n_nodes
+    reported: '24'
+    units: nodes
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 0
+- id: topo-deep-4
+  kind: computation
+  passage: 'The third mechanism builds two regions with an identical mean burden of 0.2375 and opposite topology:
+    one with 18 of 24 nodes above a moderate threshold, linked through shared upstream clusters, and one nearly
+    closed except for 4 frontier nodes at extreme burden.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/profile/deep/breadth_above_0_2
+    reported: '4'
+    units: nodes above 0.2
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 0
+- id: diffuse-broad
+  kind: computation
+  passage: Under shocks to a shared upstream cluster, the broad region loses 0.72 and the deep region 0.15.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/losses/broad/diffuse/mean
+    reported: '0.72'
+    units: mean output loss
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; shared-upstream shocks'
+    decimals: 2
+- id: diffuse-deep
+  kind: computation
+  passage: Under shocks to a shared upstream cluster, the broad region loses 0.72 and the deep region 0.15.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/losses/deep/diffuse/mean
+    reported: '0.15'
+    units: mean output loss
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; shared-upstream shocks'
+    decimals: 2
+- id: targeted-deep
+  kind: computation
+  passage: Under a shock that finds the single worst node, the deep region loses 0.86 and the broad region 0.30.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/losses/deep/targeted/mean
+    reported: '0.86'
+    units: mean output loss
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; worst-node shocks'
+    decimals: 2
+- id: targeted-broad
+  kind: computation
+  passage: Under a shock that finds the single worst node, the deep region loses 0.86 and the broad region 0.30.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/losses/broad/targeted/mean
+    reported: '0.30'
+    units: mean output loss
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; worst-node shocks'
+    decimals: 2
+- id: frontier-growth
+  kind: computation
+  passage: In the modelled race, capability rises by a factor of 4.59 over 30 years and the relative position improves
+    from 0.41 to 0.52 of the frontier, while the absolute gap widens from 0.62 to 1.79.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/frontier/capability_growth_factor
+    reported: '4.59'
+    units: capability end/start
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; frontier race'
+    decimals: 2
+- id: frontier-ratio-start
+  kind: computation
+  passage: In the modelled race, capability rises by a factor of 4.59 over 30 years and the relative position improves
+    from 0.41 to 0.52 of the frontier, while the absolute gap widens from 0.62 to 1.79.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/frontier/ratio_start
+    reported: '0.41'
+    units: capability/frontier
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 2
+- id: frontier-ratio-end
+  kind: computation
+  passage: In the modelled race, capability rises by a factor of 4.59 over 30 years and the relative position improves
+    from 0.41 to 0.52 of the frontier, while the absolute gap widens from 0.62 to 1.79.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/frontier/ratio_end
+    reported: '0.52'
+    units: capability/frontier
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 2
+- id: frontier-gap-start
+  kind: computation
+  passage: In the modelled race, capability rises by a factor of 4.59 over 30 years and the relative position improves
+    from 0.41 to 0.52 of the frontier, while the absolute gap widens from 0.62 to 1.79.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/frontier/gap_start
+    reported: '0.62'
+    units: frontier minus capability
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 2
+- id: frontier-gap-end
+  kind: computation
+  passage: In the modelled race, capability rises by a factor of 4.59 over 30 years and the relative position improves
+    from 0.41 to 0.52 of the frontier, while the absolute gap widens from 0.62 to 1.79.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/frontier/gap_end
+    reported: '1.79'
+    units: frontier minus capability
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed'
+    decimals: 2
+- id: broad-diversify
+  kind: computation
+  passage: In the broad region, diversification performs best at moderate budgets, avoiding 0.14 of loss against
+    0.10 for unboxing at the same spending, because 18 moderate nodes can each receive a second source for the cost
+    of 2 deep rebuilds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/policy/broad/by_budget/1/diversify
+    reported: '0.14'
+    units: loss avoided
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; budget 4, mixed shocks'
+    decimals: 2
+- id: broad-unbox
+  kind: computation
+  passage: In the broad region, diversification performs best at moderate budgets, avoiding 0.14 of loss against
+    0.10 for unboxing at the same spending, because 18 moderate nodes can each receive a second source for the cost
+    of 2 deep rebuilds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: model
+    pointer: /topology/policy/broad/by_budget/1/unbox
+    reported: '0.10'
+    units: loss avoided
+    conditions: 'mechanism 3: two 24-node regions, 6000 shocks, recorded seed; budget 4, mixed shocks'
+    decimals: 2
+- id: asml-report
+  kind: source
+  passage: Extreme ultraviolet lithography is supplied by one firm, whose 2025 annual report records approximately
+    5,100 suppliers and 48 such systems shipped in the year, against 279 deep ultraviolet systems, down from 374
+    the year before [@asml2026].
+  evidence:
+    citation_id: asml2026
+    locator: 'Strategic report: At a glance; Business review'
+    verified: true
+    verification_note: 'ASML 2025 Annual Report (strategic report section PDF): 5,100 total number of suppliers;
+      DUV system sales decreased from 374 units in 2024 to 279 in 2025; four EXE and 44 NXE (EUV) systems recognized
+      in sales in 2025, i.e. 48.'
+- id: zeiss-optics
+  kind: source
+  passage: 'The optics come exclusively from one supplier: more than 40,000 parts in the High-NA projection optics,
+    weighing around twelve tons, more than 25,000 parts in the illumination system, a collaborating network of more
+    than 1,200 members, and roughly a year to manufacture a single mirror [@zeiss2026].'
+  evidence:
+    citation_id: zeiss2026
+    locator: High-NA-EUV lithography page
+    verified: true
+    verification_note: 'zeiss.com page: projection optics of more than 40,000 parts weighing twelve tons; illumination
+      system of more than 25,000 parts; network of more than 1,200 members; mirrors take around a year to manufacture.'
+- id: exvi-method
+  kind: source
+  passage: The European Commission's External Vulnerability Index, built on 2022 trade data, scores external exposure
+    from import shares, supplier concentration and competitive position [@connell2025].
+  evidence:
+    citation_id: connell2025
+    locator: Single Market Economics Brief, sections 2-3
+    verified: true
+    verification_note: 'EC brief PDF (doi 10.2873/4359186) by the same authors: two pillars, dependencies risk and
+      global position risk, computed from the latest BACI data (2022). The EU/US/China scores in the Regional positions
+      section are in figures and were not re-read.'
+- id: brusoni-knowing
+  kind: source
+  passage: 'Competent system integrators routinely hold a knowledge boundary wider than their production boundary:
+    firms know more than they make, deliberately, because integration requires understanding parts they have chosen
+    not to build [@brusoni2001].'
+  evidence:
+    citation_id: brusoni2001
+    locator: Abstract
+    verified: true
+    verification_note: 'Crossref abstract of DOI 10.2307/3094825: multitechnology firms need knowledge in excess
+      of what they make to coordinate loosely coupled supplier networks and keep systems-integration capability.'
+- id: kapoor-boundaries
+  kind: source
+  passage: What a firm knows and what it makes have separable effects on performance under technological change
+    [@kapoor2012].
+  evidence:
+    citation_id: kapoor2012
+    locator: Abstract
+    verified: true
+    verification_note: 'Crossref abstract of DOI 10.1287/orsc.1110.0686: division of labor and division of knowledge
+      tested separately on time to market in DRAM, 1974-2005.'
+- id: gereffi-governance
+  kind: source
+  passage: What a supplier relationship transmits depends on how codifiable the transaction is, how complex the
+    specification is and how capable the supplier is; the governance typology of global value chains predicts which
+    relationships transmit knowledge and which transmit only parts [@gereffi2005].
+  evidence:
+    citation_id: gereffi2005
+    locator: Abstract
+    verified: true
+    verification_note: 'OpenAlex abstract of DOI 10.1080/09692290500049805: complexity, codifiability and supplier
+      capability determine five governance types.'
+- id: sturgeon-modular
+  kind: source
+  passage: Modular production networks were built to separate production from innovation, and they succeeded [@sturgeon2002].
+  evidence:
+    citation_id: sturgeon2002
+    locator: Abstract
+    verified: true
+    verification_note: 'OpenAlex abstract of DOI 10.1093/icc/11.3.451: lead firms keep product innovation and markets
+      while manufacturing moves to turn-key suppliers.'
+- id: cohen-absorption
+  kind: source
+  passage: Absorption is central, since using external knowledge requires prior related knowledge, so the capacity
+    to absorb is itself a product of past investment [@cohen1990].
+  evidence:
+    citation_id: cohen1990
+    locator: Article (title and argument)
+    verified: true
+    verification_note: 'Identity checked through DOI 10.2307/2393553 (ASQ 35(1): 128-152); prior related knowledge
+      as the basis of absorptive capacity is the article''s central thesis. No abstract retrievable; checked from
+      the bibliographic record and title.'
+- id: bis-controls
+  kind: source
+  passage: 'The controlled items confirm the breadth from the other side: the December 2024 United States rules
+    cover 24 categories of semiconductor manufacturing equipment and 3 categories of development software, along
+    with high-bandwidth memory [@bis2024].'
+  evidence:
+    citation_id: bis2024
+    locator: Press release, 2 December 2024
+    verified: true
+    verification_note: 'bis.gov press release: new controls on 24 types of semiconductor manufacturing equipment
+      and 3 types of software tools, and on high-bandwidth memory.'
+- id: network-propagation
+  kind: source
+  passage: 'The empirical literature on production networks reaches the same conclusion: specific inputs propagate
+    shocks, small nodes halt large outputs, and the aggregate consequences of microeconomic shocks depend on network
+    structure more than on size [@acemoglu2012; @barrot2016; @carvalho2021].'
+  evidence:
+    citation_id: barrot2016
+    locator: Abstracts
+    verified: true
+    verification_note: 'Crossref abstracts: Barrot and Sauvagnat (10.1093/qje/qjw018) affected suppliers of specific
+      inputs impose output losses on customers; Carvalho et al. (10.1093/qje/qjaa044) propagation along supply chains
+      after the 2011 earthquake; Acemoglu et al. (10.3982/ecta9623, OpenAlex) aggregate volatility from sectoral
+      shocks depends on network asymmetry.'
+- id: iea-concentration
+  kind: source
+  passage: 'The concentration on the other side is documented: one country holds around 85 percent of solar and
+    80 percent of lithium-ion battery supply-chain capacity, 95 percent of photovoltaic wafers and 97 percent of
+    anode materials, processes over 70 percent of lithium, cobalt, graphite and rare earths, and each of these chains
+    contains at least one step where production outside the largest exporter covers less than a quarter of demand
+    [@iea2026b].'
+  evidence:
+    citation_id: iea2026b
+    locator: Energy Technology Perspectives 2026, chapter Supply chain risks and industrial competitiveness
+    verified: true
+    verification_note: 'iea.org chapter page: China around 85% of solar and 80% of lithium-ion battery supply-chain
+      capacity, PV wafers 95%, anode materials 97%, processes over 70% of lithium, cobalt, graphite and rare earths;
+      each chain has at least one step where production outside the largest exporter covers less than one quarter.'
+- id: iea-17bn
+  kind: source
+  passage: A month of interrupted battery-chain exports would cost about 17 billion United States dollars at electric-car
+    plants elsewhere, almost two-thirds of it in the European Union.
+  evidence:
+    citation_id: iea2026b
+    locator: Energy Technology Perspectives 2026, chapter Supply chain risks and industrial competitiveness
+    verified: true
+    verification_note: 'iea.org chapter page: each month of interruption in battery supply-chain exports from the
+      largest supplier would cause output loss of USD 17 billion at electric-car plants elsewhere, almost two-thirds
+      in the EU.'
+- id: iea-inverter
+  kind: source
+  passage: Europe could make around 95 GW of inverters per year in 2025 against roughly 90 GW of demand, and switching
+    utility-scale projects away from the dominant suppliers implies a project cost premium of just under 2 percent
+    [@iea2026a].
+  evidence:
+    citation_id: iea2026a
+    locator: Commentary, 29 July 2026
+    verified: true
+    verification_note: 'iea.org commentary: Europe had capacity for around 95 GW of inverters per year in 2025 against
+      around 90 GW of shipments; project cost premium of just under 2% for utility-scale projects.'
+- id: cpc-plan
+  kind: source
+  passage: 'Its stated programme addresses whole chains: the October 2025 Five-Year Plan recommendations call for
+    decisive breakthroughs across entire chains in integrated circuits, machine tools, high-end equipment, basic
+    software, advanced materials and biomanufacturing [@cpc2025].'
+  evidence:
+    citation_id: cpc2025
+    locator: Official English text (fujian.gov.cn), section on science and technology
+    verified: true
+    verification_note: 'Official English translation: decisive breakthroughs in core technologies across entire
+      chains in integrated circuits, industrial machine tools, high-end equipment, basic software, advanced materials
+      and biomanufacturing.'
+- id: gao-share
+  kind: source
+  passage: Its share of global semiconductor manufacturing capacity fell from 37 percent in 1990 to 10 percent in
+    2022, and as of 2022 it produced no leading-edge logic at commercial scale and 3 percent of the two most common
+    memory types [@gao2025].
+  evidence:
+    citation_id: gao2025
+    locator: GAO-26-107882, pp. 6-7
+    verified: true
+    verification_note: 'Report PDF retrieved from the Internet Archive copy of gao.gov (published 11 December 2025):
+      U.S. share of global capacity dropped from 37 percent in 1990 to 10 percent in 2022; no leading-edge logic
+      at commercial scale and 3 percent of the two most common memory types as of 2022.'
+- id: doe-grid
+  kind: source
+  passage: In grid equipment, lead times reach two or more years and transformer prices rose by factors of 4 to
+    9 over 5 years for some categories [@doe2025].
+  evidence:
+    citation_id: doe2025
+    locator: energy.gov article
+    verified: true
+    verification_note: 'energy.gov Office of Electricity article: lead times of two or more years for critical equipment;
+      some transformers have seen 4-9 times price increases in the last five years.'
+- id: unido-lac
+  kind: source
+  passage: Enclave sophistication means standing on the first rung while output statistics report the fourth, and
+    the regional evidence describes persistent low growth, weak productivity and premature deindustrialization alongside
+    genuine opportunities for upgrading [@unido2026].
+  evidence:
+    citation_id: unido2026
+    locator: Regional report, overview
+    verified: true
+    verification_note: 'UNIDO IDR 2026 LAC regional report PDF: stagnation and premature deindustrialization over
+      25 years, low productivity and limited technological upgrading, with sectoral opportunities for future industrialization.'
+- id: dong-imports
+  kind: source
+  passage: 'Pharmaceuticals illustrate the ladder: an estimated 79 percent of pharmaceuticals used in Africa are
+    imported, and local production requires a capable regulatory authority, quality-assurance systems and trained
+    people in addition to plants [@dong2016].'
+  evidence:
+    citation_id: dong2016
+    locator: Editorial text (PMC4709802)
+    verified: true
+    verification_note: 'Full text via PubMed Central: around 79% of all pharmaceuticals in Africa are imported;
+      calls for quality assurance systems, a strengthened national regulatory authority and human capital development.'
+- id: farrell-chokepoint
+  kind: source
+  passage: Networks of interdependence become instruments of coercion for whoever controls their chokepoints [@farrell2019],
+    so access probability depends on alignment and on other parties' decisions, and should be reported as a scenario
+    over coalitions and not as a constant.
+  evidence:
+    citation_id: farrell2019
+    locator: Abstract
+    verified: true
+    verification_note: 'Crossref abstract of DOI 10.1162/isec_a_00351: states with jurisdiction over central nodes
+      can use the chokepoint effect to deny network access.'
+- id: def-blackbox
+  kind: definition
+  passage: 'A node is a strategic black box for a region, at a given horizon, performance level, production quantity,
+    cost ceiling and coalition boundary, when three conditions hold together: the node gates output that matters;
+    continued access can be materially influenced by firms, states, licences or routes outside the region; and the
+    region or its coalition cannot credibly deliver qualified output at that performance, quantity and cost within
+    that horizon after the incumbent supply stops.'
+  rationale: 'Central definition: three jointly necessary conditions (criticality, external access control, no credible
+    reconstitution) relative to horizon, performance, quantity, cost and coalition.'
+- id: def-cells
+  kind: definition
+  passage: Crossing the two boundaries gives four cells.
+  rationale: Defines the production/knowledge typology (closed capability, white-box import, enclave assembly, black
+    box).
+- id: assume-capindex
+  kind: assumption
+  passage: The capability index multiplies criticality, access risk, the complement of closure, the complement of
+    substitutability, and reconstitution time normalized to the horizon.
+  rationale: 'Multiplicative burden form: a node is dangerous only when several conditions hold together; the objections
+    section defends it.'
+- id: assume-stylized
+  kind: assumption
+  passage: The node types are constructed, the shock process is simple, and the burden formula is multiplicative
+    because a node is dangerous only when several conditions hold together.
+  rationale: 'Scope: mechanisms are stylized; claims concern the shape of results, not calibrated magnitudes.'
+- id: interp-trade-direction
+  kind: interpretation
+  passage: Trade measures are built from what crosses a border, so they improve when a border closes, while the
+    quantity that governs consequences moves the other way.
+  rationale: Interpretation supported by the embargo computation.
+- id: interp-scalar
+  kind: interpretation
+  passage: A single dependence number, however well constructed, cannot capture this.
+  rationale: Drawn from the ranking reversal between shock types.
+- id: interp-portfolio
+  kind: interpretation
+  passage: 'The unit of policy is therefore a minimum viable capability portfolio: architecture, metrology, repair,
+    second-source qualification, pilot-scale production, surge plans, open interfaces, and enough learning by doing
+    to keep absorption high.'
+  rationale: Policy reading of the instrument comparison.
+- id: norm-borders
+  kind: normative
+  passage: The results support measuring capability and do not support closing borders.
+  rationale: Normative conclusion; supported by closure losing to open absorption and relocalization never best
+    at adequate budget.
+runs:
+- id: model
+  required: true
+  record: verification/model.json

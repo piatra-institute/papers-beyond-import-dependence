@@ -1,0 +1,291 @@
+[
+ {
+  "id": "acemoglu2012",
+  "families": [
+   "Acemoglu",
+   "Carvalho",
+   "Ozdaglar",
+   "Tahbaz-Salehi"
+  ],
+  "authors_text": "Acemoglu, D., Carvalho, V. M., Ozdaglar, A., and Tahbaz-Salehi, A.",
+  "year": "2012",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "asml2026",
+  "families": [
+   "*ASML 2025 Annual Report*"
+  ],
+  "authors_text": "*ASML 2025 Annual Report*",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "barrot2016",
+  "families": [
+   "Barrot",
+   "Sauvagnat"
+  ],
+  "authors_text": "Barrot, J.-N., and Sauvagnat, J.",
+  "year": "2016",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "brusoni2001",
+  "families": [
+   "Brusoni",
+   "Prencipe",
+   "Pavitt"
+  ],
+  "authors_text": "Brusoni, S., Prencipe, A., and Pavitt, K.",
+  "year": "2001",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "bis2024",
+  "families": [
+   "Bureau of Industry and Security"
+  ],
+  "authors_text": "Bureau of Industry and Security",
+  "year": "2024",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "carvalho2021",
+  "families": [
+   "Carvalho",
+   "Nirei",
+   "Saito",
+   "Tahbaz-Salehi"
+  ],
+  "authors_text": "Carvalho, V. M., Nirei, M., Saito, Y. U., and Tahbaz-Salehi, A.",
+  "year": "2021",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "cpc2025",
+  "families": [
+   "Central Committee of the Communist Party of China"
+  ],
+  "authors_text": "Central Committee of the Communist Party of China",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "cohen1990",
+  "families": [
+   "Cohen",
+   "Levinthal"
+  ],
+  "authors_text": "Cohen, W. M., and Levinthal, D. A.",
+  "year": "1990",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "connell2025",
+  "families": [
+   "Connell Garcia",
+   "Ho"
+  ],
+  "authors_text": "Connell Garcia, W., and Ho, V.",
+  "year": "2025",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "doe2025",
+  "families": [
+   "Department of Energy"
+  ],
+  "authors_text": "Department of Energy",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "dong2016",
+  "families": [
+   "Dong",
+   "Mirza"
+  ],
+  "authors_text": "Dong, J., and Mirza, Z.",
+  "year": "2016",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "farrell2019",
+  "families": [
+   "Farrell",
+   "Newman"
+  ],
+  "authors_text": "Farrell, H., and Newman, A. L.",
+  "year": "2019",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "gereffi2005",
+  "families": [
+   "Gereffi",
+   "Humphrey",
+   "Sturgeon"
+  ],
+  "authors_text": "Gereffi, G., Humphrey, J., and Sturgeon, T.",
+  "year": "2005",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "gao2025",
+  "families": [
+   "Government Accountability Office"
+  ],
+  "authors_text": "Government Accountability Office",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "henderson1990",
+  "families": [
+   "Henderson",
+   "Clark"
+  ],
+  "authors_text": "Henderson, R. M., and Clark, K. B.",
+  "year": "1990",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "iea2026b",
+  "families": [
+   "International Energy Agency"
+  ],
+  "authors_text": "International Energy Agency",
+  "year": "2026a",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "iea2026a",
+  "families": [
+   "International Energy Agency"
+  ],
+  "authors_text": "International Energy Agency",
+  "year": "2026b",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "kapoor2012",
+  "families": [
+   "Kapoor",
+   "Adner"
+  ],
+  "authors_text": "Kapoor, R., and Adner, R.",
+  "year": "2012",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "nelson1982",
+  "families": [
+   "Nelson",
+   "Winter"
+  ],
+  "authors_text": "Nelson, R. R., and Winter, S. G.",
+  "year": "1982",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "oecd2025",
+  "families": [
+   "Organisation for Economic Co-operation and Development"
+  ],
+  "authors_text": "Organisation for Economic Co-operation and Development",
+  "year": "2025",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "pisano2012",
+  "families": [
+   "Pisano",
+   "Shih"
+  ],
+  "authors_text": "Pisano, G. P., and Shih, W. C.",
+  "year": "2012",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "polanyi1966",
+  "families": [
+   "Polanyi"
+  ],
+  "authors_text": "Polanyi, M.",
+  "year": "1966",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "reuters2026a",
+  "families": [
+   "Reuters"
+  ],
+  "authors_text": "Reuters",
+  "year": "2026a",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "reuters2026b",
+  "families": [
+   "Reuters"
+  ],
+  "authors_text": "Reuters",
+  "year": "2026b",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "reuters2026c",
+  "families": [
+   "Reuters"
+  ],
+  "authors_text": "Reuters",
+  "year": "2026c",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "safran2026",
+  "families": [
+   "Safran"
+  ],
+  "authors_text": "Safran",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "sturgeon2002",
+  "families": [
+   "Sturgeon"
+  ],
+  "authors_text": "Sturgeon, T. J.",
+  "year": "2002",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "teece1986",
+  "families": [
+   "Teece"
+  ],
+  "authors_text": "Teece, D. J.",
+  "year": "1986",
+  "status": "VERIFIED-CROSSREF"
+ },
+ {
+  "id": "unido2026",
+  "families": [
+   "United Nations Industrial Development Organization"
+  ],
+  "authors_text": "United Nations Industrial Development Organization",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ },
+ {
+  "id": "zeiss2026",
+  "families": [
+   "Carl Zeiss SMT"
+  ],
+  "authors_text": "Carl Zeiss SMT",
+  "year": "2026",
+  "status": "UNVERIFIED"
+ }
+]

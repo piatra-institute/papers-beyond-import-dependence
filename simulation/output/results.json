@@ -1348,13 +1348,9 @@
       "value": 5,
       "source": "OECD Supply Chain Resilience Review 2025 (over 5 percent)"
     },
-    "who_africa_medicine_imports_low_pct": {
-      "value": 70,
-      "source": "Dong and Mirza 2016, Bulletin of the WHO 94: 71-72"
-    },
-    "who_africa_medicine_imports_high_pct": {
-      "value": 90,
-      "source": "Dong and Mirza 2016"
+    "who_africa_pharmaceuticals_imported_pct": {
+      "value": 79,
+      "source": "Dong and Mirza 2016, Bulletin of the WHO 94: 71-72 (around 79% of all pharmaceuticals in Africa are imported)"
     },
     "china_duv_units_2026": {
       "value": 5,
